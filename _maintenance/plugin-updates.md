@@ -3,6 +3,7 @@ layout: default
 title: Plugin Updates
 parent: Maintenance Tasks
 nav_order: 1
+grand_parent: false
 ---
 
 # Plugin Updates

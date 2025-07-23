@@ -3,6 +3,7 @@ layout: default
 title: Managing Media
 parent: Daily Operations
 nav_order: 2
+grand_parent: false
 ---
 
 # Managing Media

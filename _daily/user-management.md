@@ -3,6 +3,7 @@ layout: default
 title: User Management
 parent: Daily Operations
 nav_order: 3
+grand_parent: false
 ---
 
 # User Management

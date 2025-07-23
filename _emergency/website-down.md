@@ -1,8 +1,9 @@
 ---
 layout: default
 title: Website is Down
-parent: Emergency Procedures
 nav_order: 1
+parent: Emergency Procedures
+grand_parent: false
 ---
 
 # Website is Down

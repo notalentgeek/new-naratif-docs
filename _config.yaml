@@ -1,95 +1,13 @@
 # Site settings
 title: New Naratif Operations Manual
 description: Internal documentation for WordPress operations and procedures
-baseurl: "/new-naratif-docs" # the subpath of your site, e.g. /blog
-url: "https://notalentgeek.github.io" # the base hostname & protocol
+baseurl: "/new-naratif-docs"
+url: "https://notalentgeek.github.io"
 
 # Theme
 remote_theme: just-the-docs/just-the-docs@v0.7.0
 
-# Theme configuration
-color_scheme: newnaratif
-search_enabled: true
-search:
-  heading_level: 2
-  previews: 3
-  preview_words_before: 5
-  preview_words_after: 10
-  tokenizer_separator: /[\s/]+/
-  rel_url: true
-  button: false
-
-# Aux links for the top navigation
-aux_links:
-  "View on GitHub":
-    - "//github.com/notalentgeek/new-naratif-docs"
-  "Main Website":
-    - "https://newnaratif.com"
-
-# Makes Aux links open in a new tab
-aux_links_new_tab: true
-
-# Footer content
-footer_content: "Copyright &copy; 2025 New Naratif. Internal documentation - do not share."
-
-# Footer last edited timestamp
-last_edit_timestamp: true
-last_edit_time_format: "%b %e %Y at %I:%M %p"
-
-# Footer "Edit this page on GitHub" link
-gh_edit_link: true
-gh_edit_link_text: "Edit this page on GitHub"
-gh_edit_repository: "https://github.com/notalentgeek/new-naratif-docs"
-gh_edit_branch: "main"
-gh_edit_view_mode: "tree"
-
-# Back to top link
-back_to_top: true
-back_to_top_text: "Back to top"
-
-# Navigation Structure
-nav_sort: case_sensitive
-
-# Callouts
-callouts:
-  warning:
-    title: Warning
-    color: red
-  important:
-    title: Important
-    color: yellow
-  note:
-    title: Note
-    color: blue
-  tip:
-    title: Tip
-    color: green
-
-# External plugins
-plugins:
-  - jekyll-seo-tag
-  - jekyll-github-metadata
-  - jekyll-include-cache
-
-# Markdown settings
-markdown: kramdown
-kramdown:
-  syntax_highlighter_opts:
-    block:
-      line_numbers: false
-
-# Collections for organizing content
-collections:
-  emergency:
-    permalink: "/:collection/:path/"
-    output: true
-  daily:
-    permalink: "/:collection/:path/"
-    output: true
-  maintenance:
-    permalink: "/:collection/:path/"
-    output: true
-
+# Just the Docs Collections Configuration
 just_the_docs:
   collections:
     emergency:
@@ -104,3 +22,39 @@ just_the_docs:
       name: Maintenance Tasks
       nav_exclude: false
       search_exclude: false
+
+collections:
+  emergency:
+    output: true
+    permalink: "/:path/"
+  daily:
+    output: true
+    permalink: "/:path/"
+  maintenance:
+    output: true
+    permalink: "/:path/"
+
+# Search
+search_enabled: true
+search:
+  heading_level: 2
+  previews: 3
+  preview_words_before: 5
+  preview_words_after: 10
+  tokenizer_separator: /[\s/]+/
+  rel_url: true
+  button: false
+
+# Aux links
+aux_links:
+  "View on GitHub":
+    - "//github.com/notalentgeek/new-naratif-docs"
+  "Main Website":
+    - "https://newnaratif.com"
+aux_links_new_tab: true
+
+# Footer
+footer_content: "Copyright &copy; 2025 New Naratif. Internal documentation - do not share."
+
+# Color scheme
+color_scheme: light

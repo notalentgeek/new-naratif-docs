@@ -3,6 +3,7 @@ layout: default
 title: Security Checks
 parent: Maintenance Tasks
 nav_order: 3
+grand_parent: false
 ---
 
 # Security Checks

@@ -3,6 +3,7 @@ layout: default
 title: Cannot Publish Content
 parent: Emergency Procedures
 nav_order: 2
+grand_parent: false
 ---
 
 # Cannot Publish Content

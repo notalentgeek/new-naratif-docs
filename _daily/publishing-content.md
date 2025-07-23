@@ -3,6 +3,7 @@ layout: default
 title: Publishing Articles
 parent: Daily Operations
 nav_order: 1
+grand_parent: false
 ---
 
 # Publishing Articles

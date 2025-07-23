@@ -3,6 +3,7 @@ layout: default
 title: Email Delivery Failed
 parent: Emergency Procedures
 nav_order: 3
+grand_parent: false
 ---
 
 # Email Delivery Failed

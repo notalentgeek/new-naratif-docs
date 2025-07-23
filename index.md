@@ -12,8 +12,8 @@ permalink: /
 Essential procedures and documentation for WordPress site management.
 {: .fs-6 .fw-300 }
 
-[Emergency Procedures](#emergency){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
-[Daily Tasks]({% link _daily/publishing-content.md %}){: .btn .fs-5 .mb-4 .mb-md-0 }
+[Emergency Procedures]({% link emergency.md %}){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
+[Daily Tasks]({% link daily.md %}){: .btn .fs-5 .mb-4 .mb-md-0 }
 
 ---
 
