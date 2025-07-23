@@ -1,0 +1,235 @@
+<h1 class="no_toc" id="email-delivery-failed">Email Delivery Failed</h1>
+
+<h2 class="no_toc text-delta" id="table-of-contents">Table of contents</h2>
+
+<ol id="markdown-toc">
+  <li><a href="#quick-diagnosis" id="markdown-toc-quick-diagnosis">Quick Diagnosis</a>    <ol>
+      <li><a href="#1-verify-the-issue" id="markdown-toc-1-verify-the-issue">1. Verify the Issue</a></li>
+      <li><a href="#2-common-email-types-affected" id="markdown-toc-2-common-email-types-affected">2. Common Email Types Affected</a></li>
+    </ol>
+  </li>
+  <li><a href="#immediate-checks" id="markdown-toc-immediate-checks">Immediate Checks</a>    <ol>
+      <li><a href="#check-smtp-plugin-status" id="markdown-toc-check-smtp-plugin-status">Check SMTP Plugin Status</a></li>
+      <li><a href="#check-server-email-service" id="markdown-toc-check-server-email-service">Check Server Email Service</a></li>
+    </ol>
+  </li>
+  <li><a href="#common-issues-and-solutions" id="markdown-toc-common-issues-and-solutions">Common Issues and Solutions</a>    <ol>
+      <li><a href="#issue-authentication-failed" id="markdown-toc-issue-authentication-failed">Issue: Authentication Failed</a></li>
+      <li><a href="#issue-emails-going-to-spam" id="markdown-toc-issue-emails-going-to-spam">Issue: Emails Going to Spam</a></li>
+      <li><a href="#issue-rate-limit-exceeded" id="markdown-toc-issue-rate-limit-exceeded">Issue: Rate Limit Exceeded</a></li>
+    </ol>
+  </li>
+  <li><a href="#manual-email-workarounds" id="markdown-toc-manual-email-workarounds">Manual Email Workarounds</a>    <ol>
+      <li><a href="#for-password-resets" id="markdown-toc-for-password-resets">For Password Resets</a></li>
+      <li><a href="#for-member-notifications" id="markdown-toc-for-member-notifications">For Member Notifications</a></li>
+      <li><a href="#for-contact-forms" id="markdown-toc-for-contact-forms">For Contact Forms</a></li>
+    </ol>
+  </li>
+  <li><a href="#smtp-settings-reference" id="markdown-toc-smtp-settings-reference">SMTP Settings Reference</a>    <ol>
+      <li><a href="#sendgrid-configuration" id="markdown-toc-sendgrid-configuration">SendGrid Configuration</a></li>
+      <li><a href="#mailgun-configuration" id="markdown-toc-mailgun-configuration">Mailgun Configuration</a></li>
+    </ol>
+  </li>
+  <li><a href="#testing-checklist" id="markdown-toc-testing-checklist">Testing Checklist</a></li>
+  <li><a href="#escalation" id="markdown-toc-escalation">Escalation</a></li>
+  <li><a href="#prevention" id="markdown-toc-prevention">Prevention</a></li>
+</ol>
+
+<hr />
+
+<blockquote class="warning">
+  <p><strong>IMPORTANT</strong>: Email delivery issues affect member communications, password resets, and notifications.</p>
+</blockquote>
+
+<h2 id="quick-diagnosis">Quick Diagnosis</h2>
+
+<h3 id="1-verify-the-issue">1. Verify the Issue</h3>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Check if ANY emails are being sent</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Test with password reset on test account</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Check email logs in WordPress admin</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Verify SMTP settings haven’t changed</li>
+</ul>
+
+<h3 id="2-common-email-types-affected">2. Common Email Types Affected</h3>
+<ul>
+  <li>Member welcome emails</li>
+  <li>Password reset emails</li>
+  <li>Comment notifications</li>
+  <li>Contact form submissions</li>
+  <li>Newsletter broadcasts</li>
+</ul>
+
+<h2 id="immediate-checks">Immediate Checks</h2>
+
+<h3 id="check-smtp-plugin-status">Check SMTP Plugin Status</h3>
+
+<ol>
+  <li><strong>Navigate to Plugin Settings</strong>
+    <ul>
+      <li>Go to Settings → WP Mail SMTP (or similar plugin)</li>
+      <li>Verify status shows “Connected”</li>
+      <li>Check authentication is valid</li>
+    </ul>
+  </li>
+  <li><strong>Send Test Email</strong>
+    <ul>
+      <li>Use plugin’s test email feature</li>
+      <li>Send to your own email</li>
+      <li>Check spam folder</li>
+    </ul>
+  </li>
+  <li><strong>View Email Log</strong>
+    <ul>
+      <li>Check email log plugin if installed</li>
+      <li>Look for failed attempts</li>
+      <li>Note any error messages</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="check-server-email-service">Check Server Email Service</h3>
+
+<ol>
+  <li><strong>CloudWays Email Service</strong>
+```
+Login to CloudWays → Server → Settings → Mail
+Verify:
+    <ul>
+      <li>SMTP is enabled</li>
+      <li>Correct SMTP server</li>
+      <li>Valid credentials
+```</li>
+    </ul>
+  </li>
+  <li><strong>Email Service Provider</strong>
+    <ul>
+      <li>Login to SendGrid/Mailgun/etc.</li>
+      <li>Check account status (not suspended)</li>
+      <li>Verify API key is valid</li>
+      <li>Check sending limits</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="common-issues-and-solutions">Common Issues and Solutions</h2>
+
+<h3 id="issue-authentication-failed">Issue: Authentication Failed</h3>
+
+<p><strong>Solution:</strong></p>
+<ol>
+  <li>Re-enter SMTP credentials</li>
+  <li>Generate new API key if needed</li>
+  <li>Update in WordPress settings</li>
+  <li>Test email again</li>
+</ol>
+
+<h3 id="issue-emails-going-to-spam">Issue: Emails Going to Spam</h3>
+
+<p><strong>Solution:</strong></p>
+<ol>
+  <li>Check SPF records</li>
+  <li>Verify DKIM is configured</li>
+  <li>Review email content for spam triggers</li>
+  <li>Add “from” email to trusted senders</li>
+</ol>
+
+<h3 id="issue-rate-limit-exceeded">Issue: Rate Limit Exceeded</h3>
+
+<p><strong>Solution:</strong></p>
+<ol>
+  <li>Check sending limits with provider</li>
+  <li>Implement email queue plugin</li>
+  <li>Spread bulk emails over time</li>
+  <li>Upgrade plan if needed</li>
+</ol>
+
+<h2 id="manual-email-workarounds">Manual Email Workarounds</h2>
+
+<h3 id="for-password-resets">For Password Resets</h3>
+<ol>
+  <li>Manually reset user password in WordPress</li>
+  <li>Users → All Users → Edit user</li>
+  <li>Generate new password</li>
+  <li>Send via personal email or SMS</li>
+</ol>
+
+<h3 id="for-member-notifications">For Member Notifications</h3>
+<ol>
+  <li>Export affected user emails</li>
+  <li>Use personal email client</li>
+  <li>BCC members (respect privacy)</li>
+  <li>Include apology for technical issues</li>
+</ol>
+
+<h3 id="for-contact-forms">For Contact Forms</h3>
+<ol>
+  <li>Add notice on website about email issues</li>
+  <li>Provide alternative contact method</li>
+  <li>Check form entries in database</li>
+  <li>Manually forward inquiries</li>
+</ol>
+
+<h2 id="smtp-settings-reference">SMTP Settings Reference</h2>
+
+<h3 id="sendgrid-configuration">SendGrid Configuration</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SMTP Host: smtp.sendgrid.net
+SMTP Port: 587
+Encryption: TLS
+Authentication: Yes
+Username: apikey
+Password: [Your API Key]
+</code></pre></div></div>
+
+<h3 id="mailgun-configuration">Mailgun Configuration</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SMTP Host: smtp.mailgun.org
+SMTP Port: 587
+Encryption: TLS
+Username: [Your Username]
+Password: [Your Password]
+</code></pre></div></div>
+
+<h2 id="testing-checklist">Testing Checklist</h2>
+
+<p>After making changes:</p>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Send test email from plugin</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Test password reset</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Test contact form</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Check email logs</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Verify in different email clients</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Check spam folders</li>
+</ul>
+
+<h2 id="escalation">Escalation</h2>
+
+<p>If emails still failing after 30 minutes:</p>
+
+<ol>
+  <li><strong>Contact Hosting Support</strong>
+    <ul>
+      <li>CloudWays: Open urgent ticket</li>
+      <li>Mention email delivery critical</li>
+    </ul>
+  </li>
+  <li><strong>Contact Email Service</strong>
+    <ul>
+      <li>SendGrid/Mailgun support</li>
+      <li>Check service status page</li>
+    </ul>
+  </li>
+  <li><strong>Temporary Alternative</strong>
+    <ul>
+      <li>Switch to different SMTP service</li>
+      <li>Use WordPress default mail() as last resort</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="prevention">Prevention</h2>
+
+<ul>
+  <li>Monitor email logs weekly</li>
+  <li>Keep API keys secure and updated</li>
+  <li>Maintain SPF/DKIM</li>
+</ul>

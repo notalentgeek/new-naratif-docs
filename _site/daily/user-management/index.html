@@ -1,0 +1,412 @@
+<h1 class="no_toc" id="user-management">User Management</h1>
+
+<h2 class="no_toc text-delta" id="table-of-contents">Table of contents</h2>
+
+<ol id="markdown-toc">
+  <li><a href="#overview" id="markdown-toc-overview">Overview</a></li>
+  <li><a href="#wordpress-user-roles" id="markdown-toc-wordpress-user-roles">WordPress User Roles</a>    <ol>
+      <li><a href="#role-hierarchy" id="markdown-toc-role-hierarchy">Role Hierarchy</a></li>
+      <li><a href="#custom-roles-if-applicable" id="markdown-toc-custom-roles-if-applicable">Custom Roles (If Applicable)</a></li>
+    </ol>
+  </li>
+  <li><a href="#creating-new-users" id="markdown-toc-creating-new-users">Creating New Users</a>    <ol>
+      <li><a href="#step-by-step-process" id="markdown-toc-step-by-step-process">Step-by-Step Process</a></li>
+      <li><a href="#best-practices" id="markdown-toc-best-practices">Best Practices</a></li>
+    </ol>
+  </li>
+  <li><a href="#managing-existing-users" id="markdown-toc-managing-existing-users">Managing Existing Users</a>    <ol>
+      <li><a href="#viewing-users" id="markdown-toc-viewing-users">Viewing Users</a></li>
+      <li><a href="#editing-users" id="markdown-toc-editing-users">Editing Users</a></li>
+      <li><a href="#bulk-actions" id="markdown-toc-bulk-actions">Bulk Actions</a></li>
+    </ol>
+  </li>
+  <li><a href="#common-user-tasks" id="markdown-toc-common-user-tasks">Common User Tasks</a>    <ol>
+      <li><a href="#password-reset-requests" id="markdown-toc-password-reset-requests">Password Reset Requests</a></li>
+      <li><a href="#account-lockouts" id="markdown-toc-account-lockouts">Account Lockouts</a></li>
+      <li><a href="#removing-users" id="markdown-toc-removing-users">Removing Users</a></li>
+    </ol>
+  </li>
+  <li><a href="#user-security" id="markdown-toc-user-security">User Security</a>    <ol>
+      <li><a href="#security-best-practices" id="markdown-toc-security-best-practices">Security Best Practices</a></li>
+      <li><a href="#monitoring-activity" id="markdown-toc-monitoring-activity">Monitoring Activity</a></li>
+    </ol>
+  </li>
+  <li><a href="#member-vs-user-management" id="markdown-toc-member-vs-user-management">Member vs User Management</a>    <ol>
+      <li><a href="#wordpress-users" id="markdown-toc-wordpress-users">WordPress Users</a></li>
+      <li><a href="#members-membership-plugin" id="markdown-toc-members-membership-plugin">Members (Membership Plugin)</a></li>
+    </ol>
+  </li>
+  <li><a href="#troubleshooting" id="markdown-toc-troubleshooting">Troubleshooting</a>    <ol>
+      <li><a href="#email-not-received" id="markdown-toc-email-not-received">Email Not Received</a></li>
+      <li><a href="#permission-issues" id="markdown-toc-permission-issues">Permission Issues</a></li>
+      <li><a href="#profile-update-errors" id="markdown-toc-profile-update-errors">Profile Update Errors</a></li>
+    </ol>
+  </li>
+  <li><a href="#documentation" id="markdown-toc-documentation">Documentation</a>    <ol>
+      <li><a href="#track-user-changes" id="markdown-toc-track-user-changes">Track User Changes</a></li>
+    </ol>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="overview">Overview</h2>
+
+<p>Managing user accounts, roles, and permissions is essential for maintaining site security and proper workflow. This guide covers creating users, assigning roles, and handling common user issues.</p>
+
+<h2 id="wordpress-user-roles">WordPress User Roles</h2>
+
+<h3 id="role-hierarchy">Role Hierarchy</h3>
+
+<ol>
+  <li><strong>Administrator</strong>
+    <ul>
+      <li>Full site access</li>
+      <li>Can manage all settings</li>
+      <li>Add/remove users</li>
+      <li>Install plugins/themes</li>
+    </ul>
+  </li>
+  <li><strong>Editor</strong>
+    <ul>
+      <li>Publish/edit all posts</li>
+      <li>Manage categories</li>
+      <li>Moderate comments</li>
+      <li>Upload media</li>
+    </ul>
+  </li>
+  <li><strong>Author</strong>
+    <ul>
+      <li>Publish own posts</li>
+      <li>Upload media</li>
+      <li>Edit own published posts</li>
+    </ul>
+  </li>
+  <li><strong>Contributor</strong>
+    <ul>
+      <li>Write posts (can’t publish)</li>
+      <li>Edit own pending posts</li>
+      <li>No media upload</li>
+    </ul>
+  </li>
+  <li><strong>Subscriber</strong>
+    <ul>
+      <li>Read content</li>
+      <li>Manage profile</li>
+      <li>Comment (if enabled)</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="custom-roles-if-applicable">Custom Roles (If Applicable)</h3>
+<ul>
+  <li><strong>Staff Writer</strong>: [Custom permissions]</li>
+  <li><strong>Translator</strong>: [Custom permissions]</li>
+</ul>
+
+<h2 id="creating-new-users">Creating New Users</h2>
+
+<h3 id="step-by-step-process">Step-by-Step Process</h3>
+
+<ol>
+  <li><strong>Navigate to Users</strong>
+    <ul>
+      <li>Go to Users → Add New</li>
+      <li>Or click “+ New” → User</li>
+    </ul>
+  </li>
+  <li><strong>Fill Required Information</strong>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Username: firstname.lastname (no spaces)
+Email: user@example.com
+First Name: [User's first name]
+Last Name: [User's last name]
+Website: (optional)
+Password: Generate strong password
+</code></pre></div>    </div>
+  </li>
+  <li><strong>Select Role</strong>
+    <ul>
+      <li>Choose appropriate role</li>
+      <li>Start with lower permissions</li>
+      <li>Upgrade as needed</li>
+    </ul>
+  </li>
+  <li><strong>Send Notification</strong>
+    <ul>
+      <li>Check “Send User Notification”</li>
+      <li>User receives login details</li>
+      <li>Password reset link included</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="best-practices">Best Practices</h3>
+
+<blockquote class="important">
+  <p>Never share admin credentials. Create individual accounts.</p>
+</blockquote>
+
+<ul>
+  <li>Use professional usernames</li>
+  <li>Require strong passwords</li>
+  <li>Assign minimal necessary role</li>
+  <li>Document role assignments</li>
+</ul>
+
+<h2 id="managing-existing-users">Managing Existing Users</h2>
+
+<h3 id="viewing-users">Viewing Users</h3>
+
+<ol>
+  <li><strong>Users List</strong>
+    <ul>
+      <li>Go to Users → All Users</li>
+      <li>Filter by role</li>
+      <li>Search by name/email</li>
+    </ul>
+  </li>
+  <li><strong>User Information</strong>
+    <ul>
+      <li>Click username to edit</li>
+      <li>View posts by user</li>
+      <li>Check last login (if plugin installed)</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="editing-users">Editing Users</h3>
+
+<ol>
+  <li><strong>Change User Details</strong>
+    <ul>
+      <li>Update email</li>
+      <li>Change display name</li>
+      <li>Modify biographical info</li>
+    </ul>
+  </li>
+  <li><strong>Change Role</strong>
+    <ul>
+      <li>Select new role from dropdown</li>
+      <li>Consider impact on existing content</li>
+      <li>Notify user of changes</li>
+    </ul>
+  </li>
+  <li><strong>Reset Password</strong>
+    <ul>
+      <li>Generate new password</li>
+      <li>Or send reset link</li>
+      <li>Never email passwords directly</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="bulk-actions">Bulk Actions</h3>
+
+<ol>
+  <li><strong>Select Multiple Users</strong>
+    <ul>
+      <li>Check boxes next to names</li>
+      <li>Use bulk actions dropdown</li>
+    </ul>
+  </li>
+  <li><strong>Available Actions</strong>
+    <ul>
+      <li>Delete users</li>
+      <li>Change roles</li>
+      <li>Send password resets</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="common-user-tasks">Common User Tasks</h2>
+
+<h3 id="password-reset-requests">Password Reset Requests</h3>
+
+<blockquote class="tip">
+  <p>Always verify user identity before resetting passwords</p>
+</blockquote>
+
+<ol>
+  <li><strong>User-Initiated Reset</strong>
+    <ul>
+      <li>Direct to login page</li>
+      <li>Click “Lost your password?”</li>
+      <li>Enter username/email</li>
+    </ul>
+  </li>
+  <li><strong>Admin-Initiated Reset</strong>
+    <ul>
+      <li>Edit user profile</li>
+      <li>Generate new password</li>
+      <li>Email reset link</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="account-lockouts">Account Lockouts</h3>
+
+<p><strong>User Can’t Login:</strong></p>
+<ol>
+  <li>Check username/email spelling</li>
+  <li>Verify account exists</li>
+  <li>Check if account is locked (security plugin)</li>
+  <li>Reset password if needed</li>
+</ol>
+
+<p><strong>Too Many Login Attempts:</strong></p>
+<ol>
+  <li>Wait for lockout to expire</li>
+  <li>Or manually unlock via security plugin</li>
+  <li>Check for brute force attempts</li>
+</ol>
+
+<h3 id="removing-users">Removing Users</h3>
+
+<blockquote class="warning">
+  <p>Always reassign content before deleting users</p>
+</blockquote>
+
+<ol>
+  <li><strong>Delete Process</strong>
+    <ul>
+      <li>Go to user profile</li>
+      <li>Delete user link at bottom</li>
+      <li>Choose content attribution:
+        <ul>
+          <li>Delete all content</li>
+          <li>Attribute to another user</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><strong>Alternative: Disable Account</strong>
+    <ul>
+      <li>Change role to “No role”</li>
+      <li>Preserves user history</li>
+      <li>Prevents login</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="user-security">User Security</h2>
+
+<h3 id="security-best-practices">Security Best Practices</h3>
+
+<ol>
+  <li><strong>Password Requirements</strong>
+    <ul>
+      <li>Minimum 12 characters</li>
+      <li>Mix of characters</li>
+      <li>No dictionary words</li>
+      <li>Unique per site</li>
+    </ul>
+  </li>
+  <li><strong>Two-Factor Authentication</strong>
+    <ul>
+      <li>Enable if plugin available</li>
+      <li>Require for admins</li>
+      <li>Recommend for all users</li>
+    </ul>
+  </li>
+  <li><strong>Regular Audits</strong>
+    <ul>
+      <li>Review user list monthly</li>
+      <li>Remove inactive accounts</li>
+      <li>Check for suspicious activity</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="monitoring-activity">Monitoring Activity</h3>
+
+<ol>
+  <li><strong>Activity Logs</strong>
+    <ul>
+      <li>Use activity log plugin</li>
+      <li>Monitor login attempts</li>
+      <li>Track user actions</li>
+    </ul>
+  </li>
+  <li><strong>Suspicious Activity</strong>
+    <ul>
+      <li>Multiple failed logins</li>
+      <li>Unusual posting patterns</li>
+      <li>Profile changes</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="member-vs-user-management">Member vs User Management</h2>
+
+<h3 id="wordpress-users">WordPress Users</h3>
+<ul>
+  <li>Editorial team</li>
+  <li>Content creators</li>
+  <li>Site administrators</li>
+</ul>
+
+<h3 id="members-membership-plugin">Members (Membership Plugin)</h3>
+<ul>
+  <li>Paying subscribers</li>
+  <li>Different system</li>
+  <li>Separate documentation</li>
+</ul>
+
+<h2 id="troubleshooting">Troubleshooting</h2>
+
+<h3 id="email-not-received">Email Not Received</h3>
+
+<ol>
+  <li>Check spam folder</li>
+  <li>Verify email address</li>
+  <li>Test email system</li>
+  <li>Send manually if needed</li>
+</ol>
+
+<h3 id="permission-issues">Permission Issues</h3>
+
+<p><strong>“You don’t have permission”</strong></p>
+<ol>
+  <li>Check user role</li>
+  <li>Verify specific capabilities</li>
+  <li>Clear browser cache</li>
+  <li>Re-login</li>
+</ol>
+
+<h3 id="profile-update-errors">Profile Update Errors</h3>
+
+<ol>
+  <li>Check required fields</li>
+  <li>Verify email uniqueness</li>
+  <li>Clear cache</li>
+  <li>Try different browser</li>
+</ol>
+
+<h2 id="documentation">Documentation</h2>
+
+<h3 id="track-user-changes">Track User Changes</h3>
+
+<blockquote class="note">
+  <p>Keep record of all user management actions</p>
+</blockquote>
+
+<p><strong>Document:</strong></p>
+<ul>
+  <li>New user additions</li>
+  <li>Role changes</li>
+  <li>Account deletions</li>
+  <li>Security incidents</li>
+</ul>
+
+<p><strong>Template:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Date: [DATE]
+Action: [Added/Modified/Deleted]
+User: [Username]
+Role: [Old Role] → [New Role]
+Reason: [Business reason]
+Approved by: [Manager name]
+</code></pre></div></div>
+
+<hr />
+
+<p>*Last updated: *</p>

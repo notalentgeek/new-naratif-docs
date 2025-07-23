@@ -1,0 +1,446 @@
+<h1 class="no_toc" id="backup-verification">Backup Verification</h1>
+
+<h2 class="no_toc text-delta" id="table-of-contents">Table of contents</h2>
+
+<ol id="markdown-toc">
+  <li><a href="#overview" id="markdown-toc-overview">Overview</a></li>
+  <li><a href="#backup-schedule" id="markdown-toc-backup-schedule">Backup Schedule</a>    <ol>
+      <li><a href="#automated-backups" id="markdown-toc-automated-backups">Automated Backups</a></li>
+      <li><a href="#manual-backups" id="markdown-toc-manual-backups">Manual Backups</a></li>
+    </ol>
+  </li>
+  <li><a href="#backup-components" id="markdown-toc-backup-components">Backup Components</a>    <ol>
+      <li><a href="#what-gets-backed-up" id="markdown-toc-what-gets-backed-up">What Gets Backed Up</a></li>
+    </ol>
+  </li>
+  <li><a href="#verification-process" id="markdown-toc-verification-process">Verification Process</a>    <ol>
+      <li><a href="#daily-checks" id="markdown-toc-daily-checks">Daily Checks</a></li>
+      <li><a href="#weekly-verification" id="markdown-toc-weekly-verification">Weekly Verification</a></li>
+      <li><a href="#monthly-restore-test" id="markdown-toc-monthly-restore-test">Monthly Restore Test</a></li>
+    </ol>
+  </li>
+  <li><a href="#cloudways-backup-management" id="markdown-toc-cloudways-backup-management">CloudWays Backup Management</a>    <ol>
+      <li><a href="#accessing-backups" id="markdown-toc-accessing-backups">Accessing Backups</a></li>
+      <li><a href="#creating-manual-backups" id="markdown-toc-creating-manual-backups">Creating Manual Backups</a></li>
+      <li><a href="#restore-options" id="markdown-toc-restore-options">Restore Options</a></li>
+    </ol>
+  </li>
+  <li><a href="#external-backup-strategy" id="markdown-toc-external-backup-strategy">External Backup Strategy</a>    <ol>
+      <li><a href="#additional-backup-locations" id="markdown-toc-additional-backup-locations">Additional Backup Locations</a></li>
+    </ol>
+  </li>
+  <li><a href="#testing-procedures" id="markdown-toc-testing-procedures">Testing Procedures</a>    <ol>
+      <li><a href="#quick-verification-test" id="markdown-toc-quick-verification-test">Quick Verification Test</a></li>
+      <li><a href="#full-restore-test" id="markdown-toc-full-restore-test">Full Restore Test</a></li>
+    </ol>
+  </li>
+  <li><a href="#troubleshooting" id="markdown-toc-troubleshooting">Troubleshooting</a>    <ol>
+      <li><a href="#backup-failures" id="markdown-toc-backup-failures">Backup Failures</a></li>
+      <li><a href="#restore-issues" id="markdown-toc-restore-issues">Restore Issues</a></li>
+    </ol>
+  </li>
+  <li><a href="#documentation" id="markdown-toc-documentation">Documentation</a>    <ol>
+      <li><a href="#backup-log-template" id="markdown-toc-backup-log-template">Backup Log Template</a></li>
+    </ol>
+  </li>
+  <li><a href="#recovery-procedures" id="markdown-toc-recovery-procedures">Recovery Procedures</a>    <ol>
+      <li><a href="#emergency-restore" id="markdown-toc-emergency-restore">Emergency Restore</a></li>
+      <li><a href="#post-restore-tasks" id="markdown-toc-post-restore-tasks">Post-Restore Tasks</a></li>
+    </ol>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="overview">Overview</h2>
+
+<p>Regular backup verification ensures data can be recovered in emergencies. This guide covers checking backups, testing restoration, and maintaining backup integrity.</p>
+
+<blockquote class="warning">
+  <p>An untested backup is not a backup! Always verify backups can be restored.</p>
+</blockquote>
+
+<h2 id="backup-schedule">Backup Schedule</h2>
+
+<h3 id="automated-backups">Automated Backups</h3>
+<ul>
+  <li><strong>Daily</strong>: Full site backup at 3 AM</li>
+  <li><strong>Weekly</strong>: Archived to external storage</li>
+  <li><strong>Monthly</strong>: Offsite backup rotation</li>
+</ul>
+
+<h3 id="manual-backups">Manual Backups</h3>
+<ul>
+  <li><strong>Before Updates</strong>: Always create manual backup</li>
+  <li><strong>Before Major Changes</strong>: Content imports, design changes</li>
+  <li><strong>Monthly Test</strong>: Restore verification</li>
+</ul>
+
+<h2 id="backup-components">Backup Components</h2>
+
+<h3 id="what-gets-backed-up">What Gets Backed Up</h3>
+
+<ol>
+  <li><strong>Database</strong>
+    <ul>
+      <li>All WordPress tables</li>
+      <li>User data</li>
+      <li>Posts and pages</li>
+      <li>Settings and configurations</li>
+    </ul>
+  </li>
+  <li><strong>Files</strong>
+    <ul>
+      <li>WordPress core files</li>
+      <li>Themes and plugins</li>
+      <li>Uploads folder (media)</li>
+      <li>Configuration files</li>
+    </ul>
+  </li>
+  <li><strong>Not Included</strong>
+    <ul>
+      <li>Server configurations</li>
+      <li>Email accounts</li>
+      <li>External services</li>
+      <li>CDN cached files</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="verification-process">Verification Process</h2>
+
+<h3 id="daily-checks">Daily Checks</h3>
+
+<blockquote class="note">
+  <p>Automated emails should confirm daily backup success</p>
+</blockquote>
+
+<ol>
+  <li><strong>Check Backup Status</strong>
+    <ul>
+      <li>Login to CloudWays</li>
+      <li>Navigate to Backups</li>
+      <li>Verify today’s backup exists</li>
+      <li>Check backup size (should be consistent)</li>
+    </ul>
+  </li>
+  <li><strong>Review Email Notifications</strong>
+    <ul>
+      <li>Check for backup success emails</li>
+      <li>Note any failure notifications</li>
+      <li>Investigate size discrepancies</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="weekly-verification">Weekly Verification</h3>
+
+<ol>
+  <li><strong>Download Test File</strong>
+```
+    <ul>
+      <li>Select recent backup</li>
+      <li>Download single file (not full backup)</li>
+      <li>Verify file integrity</li>
+      <li>Check file can be opened
+```</li>
+    </ul>
+  </li>
+  <li><strong>Check Storage Usage</strong>
+    <ul>
+      <li>Monitor backup storage space</li>
+      <li>Ensure adequate space remains</li>
+      <li>Plan for storage expansion</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="monthly-restore-test">Monthly Restore Test</h3>
+
+<blockquote class="important">
+  <p>Perform restore tests on staging environment only</p>
+</blockquote>
+
+<ol>
+  <li><strong>Create Test Environment</strong>
+    <ul>
+      <li>Use staging site</li>
+      <li>Or create temporary test site</li>
+      <li>Never test on production</li>
+    </ul>
+  </li>
+  <li><strong>Restore Process</strong>
+    <ul>
+      <li>Select backup from last week</li>
+      <li>Initiate restore to test site</li>
+      <li>Document time taken</li>
+      <li>Verify complete restoration</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="cloudways-backup-management">CloudWays Backup Management</h2>
+
+<h3 id="accessing-backups">Accessing Backups</h3>
+
+<ol>
+  <li><strong>Via CloudWays Panel</strong>
+```
+    <ol>
+      <li>Login to CloudWays</li>
+      <li>Select Application</li>
+      <li>Click “Backup and Restore”</li>
+      <li>View available backups
+```</li>
+    </ol>
+  </li>
+  <li><strong>Backup Details</strong>
+    <ul>
+      <li>Date and time</li>
+      <li>Backup size</li>
+      <li>Backup type (manual/automated)</li>
+      <li>Retention period</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="creating-manual-backups">Creating Manual Backups</h3>
+
+<ol>
+  <li><strong>On-Demand Backup</strong>
+    <ul>
+      <li>Click “Take Backup Now”</li>
+      <li>Add descriptive label</li>
+      <li>Select backup frequency</li>
+      <li>Wait for completion</li>
+    </ul>
+  </li>
+  <li><strong>Pre-Update Backup</strong>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Label: "Pre-[update type]-backup-YYYY-MM-DD"
+Example: "Pre-plugin-update-backup-2025-01-15"
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h3 id="restore-options">Restore Options</h3>
+
+<ol>
+  <li><strong>Full Restore</strong>
+    <ul>
+      <li>Restores entire application</li>
+      <li>Includes database and files</li>
+      <li>Overwrites current site</li>
+    </ul>
+  </li>
+  <li><strong>Partial Restore</strong>
+    <ul>
+      <li>Database only</li>
+      <li>Files only</li>
+      <li>Specific folders</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="external-backup-strategy">External Backup Strategy</h2>
+
+<h3 id="additional-backup-locations">Additional Backup Locations</h3>
+
+<blockquote class="tip">
+  <p>Follow 3-2-1 rule: 3 copies, 2 different media, 1 offsite</p>
+</blockquote>
+
+<ol>
+  <li><strong>Local Backup</strong>
+    <ul>
+      <li>Download monthly</li>
+      <li>Store on external drive</li>
+      <li>Encrypt sensitive data</li>
+    </ul>
+  </li>
+  <li><strong>Cloud Storage</strong>
+    <ul>
+      <li>Google Drive / Dropbox</li>
+      <li>Automated sync</li>
+      <li>Version history enabled</li>
+    </ul>
+  </li>
+  <li><strong>Offsite Physical</strong>
+    <ul>
+      <li>Quarterly USB backup</li>
+      <li>Store in different location</li>
+      <li>Rotate old backups</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="testing-procedures">Testing Procedures</h2>
+
+<h3 id="quick-verification-test">Quick Verification Test</h3>
+
+<ol>
+  <li><strong>Database Check</strong>
+    <ul>
+      <li>Export current database</li>
+      <li>Compare table count</li>
+      <li>Check recent posts exist</li>
+      <li>Verify user accounts</li>
+    </ul>
+  </li>
+  <li><strong>File Check</strong>
+    <ul>
+      <li>Download wp-content folder</li>
+      <li>Verify media files present</li>
+      <li>Check theme files intact</li>
+      <li>Confirm plugin folders</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="full-restore-test">Full Restore Test</h3>
+
+<p><strong>Quarterly Process:</strong></p>
+
+<ol>
+  <li><strong>Preparation</strong>
+    <ul class="task-list">
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Schedule 2-hour window</li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Notify team of test</li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Document current state</li>
+    </ul>
+  </li>
+  <li><strong>Execution</strong>
+    <ul class="task-list">
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Create test environment</li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Restore selected backup</li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Verify all content</li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Test functionality</li>
+    </ul>
+  </li>
+  <li><strong>Validation</strong>
+    <ul class="task-list">
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Homepage loads</li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Recent posts present</li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Media displays</li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Users can login</li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Forms function</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="troubleshooting">Troubleshooting</h2>
+
+<h3 id="backup-failures">Backup Failures</h3>
+
+<p><strong>No Daily Backup Created</strong></p>
+<ol>
+  <li>Check CloudWays status</li>
+  <li>Verify payment status</li>
+  <li>Check storage space</li>
+  <li>Contact support</li>
+</ol>
+
+<p><strong>Backup Size Unusual</strong></p>
+<ul>
+  <li>Much smaller: Check if content deleted</li>
+  <li>Much larger: Look for hack/spam</li>
+  <li>Investigate changes</li>
+  <li>Run security scan</li>
+</ul>
+
+<h3 id="restore-issues">Restore Issues</h3>
+
+<p><strong>Restore Fails</strong></p>
+<ol>
+  <li>Check backup integrity</li>
+  <li>Verify sufficient space</li>
+  <li>Try different backup</li>
+  <li>Contact CloudWays support</li>
+</ol>
+
+<p><strong>Partial Data After Restore</strong></p>
+<ol>
+  <li>Check backup completeness</li>
+  <li>Verify restore process completed</li>
+  <li>Review error logs</li>
+  <li>Try manual restoration</li>
+</ol>
+
+<h2 id="documentation">Documentation</h2>
+
+<h3 id="backup-log-template">Backup Log Template</h3>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gu">## Backup Verification Log - [MONTH YEAR]</span>
+
+<span class="gu">### Daily Checks</span>
+<span class="p">-</span> Week 1: ✓ All backups successful
+<span class="p">-</span> Week 2: ✓ All backups successful
+<span class="p">-</span> Week 3: ⚠️ Backup delayed on [date]
+<span class="p">-</span> Week 4: ✓ All backups successful
+
+<span class="gu">### Monthly Restore Test</span>
+Date: [DATE]
+Backup Tested: [Backup ID/Date]
+Test Environment: [Staging/Test site]
+Result: [PASS/FAIL]
+
+<span class="gu">### Issues Found</span>
+<span class="p">-</span> [List any issues]
+<span class="p">-</span> [Actions taken]
+
+<span class="gu">### Storage Status</span>
+<span class="p">-</span> CloudWays: [X]GB used of [Y]GB
+<span class="p">-</span> External: [Status]
+<span class="p">-</span> Offsite: Last updated [DATE]
+
+<span class="gu">### Sign-off</span>
+Verified by: [Name]
+Date: [Date]
+</code></pre></div></div>
+
+<h2 id="recovery-procedures">Recovery Procedures</h2>
+
+<h3 id="emergency-restore">Emergency Restore</h3>
+
+<blockquote class="warning">
+  <p>Only perform emergency restore after confirming data loss</p>
+</blockquote>
+
+<ol>
+  <li><strong>Assess Damage</strong>
+    <ul>
+      <li>Document what’s wrong</li>
+      <li>Check if partial fix possible</li>
+      <li>Decide on restore necessity</li>
+    </ul>
+  </li>
+  <li><strong>Communication</strong>
+    <ul>
+      <li>Notify all stakeholders</li>
+      <li>Post maintenance notice</li>
+      <li>Estimate downtime</li>
+    </ul>
+  </li>
+  <li><strong>Execute Restore</strong>
+    <ul>
+      <li>Select most recent good backup</li>
+      <li>Initiate restore process</li>
+      <li>Monitor progress</li>
+      <li>Test thoroughly</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="post-restore-tasks">Post-Restore Tasks</h3>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Verify all content restored</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Check user accounts active</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Test critical functionality</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Clear all caches</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Monitor for issues</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Document incident</li>
+</ul>
+
+<hr />
+
+<p>*Last updated: *</p>

@@ -1,0 +1,448 @@
+<h1 class="no_toc" id="security-checks">Security Checks</h1>
+
+<h2 class="no_toc text-delta" id="table-of-contents">Table of contents</h2>
+
+<ol id="markdown-toc">
+  <li><a href="#overview" id="markdown-toc-overview">Overview</a></li>
+  <li><a href="#security-check-schedule" id="markdown-toc-security-check-schedule">Security Check Schedule</a>    <ol>
+      <li><a href="#daily-checks-5-minutes" id="markdown-toc-daily-checks-5-minutes">Daily Checks (5 minutes)</a></li>
+      <li><a href="#weekly-checks-30-minutes" id="markdown-toc-weekly-checks-30-minutes">Weekly Checks (30 minutes)</a></li>
+      <li><a href="#monthly-checks-2-hours" id="markdown-toc-monthly-checks-2-hours">Monthly Checks (2 hours)</a></li>
+    </ol>
+  </li>
+  <li><a href="#daily-security-monitoring" id="markdown-toc-daily-security-monitoring">Daily Security Monitoring</a>    <ol>
+      <li><a href="#1-check-security-dashboard" id="markdown-toc-1-check-security-dashboard">1. Check Security Dashboard</a></li>
+      <li><a href="#2-review-login-activity" id="markdown-toc-2-review-login-activity">2. Review Login Activity</a></li>
+      <li><a href="#3-monitor-404-errors" id="markdown-toc-3-monitor-404-errors">3. Monitor 404 Errors</a></li>
+    </ol>
+  </li>
+  <li><a href="#weekly-security-tasks" id="markdown-toc-weekly-security-tasks">Weekly Security Tasks</a>    <ol>
+      <li><a href="#1-user-account-audit" id="markdown-toc-1-user-account-audit">1. User Account Audit</a></li>
+      <li><a href="#2-file-integrity-check" id="markdown-toc-2-file-integrity-check">2. File Integrity Check</a></li>
+      <li><a href="#3-plugintheme-audit" id="markdown-toc-3-plugintheme-audit">3. Plugin/Theme Audit</a></li>
+    </ol>
+  </li>
+  <li><a href="#monthly-security-audit" id="markdown-toc-monthly-security-audit">Monthly Security Audit</a>    <ol>
+      <li><a href="#1-comprehensive-scan" id="markdown-toc-1-comprehensive-scan">1. Comprehensive Scan</a></li>
+      <li><a href="#2-password-security" id="markdown-toc-2-password-security">2. Password Security</a></li>
+      <li><a href="#3-permission-review" id="markdown-toc-3-permission-review">3. Permission Review</a></li>
+      <li><a href="#4-ssl-certificate" id="markdown-toc-4-ssl-certificate">4. SSL Certificate</a></li>
+    </ol>
+  </li>
+  <li><a href="#security-best-practices" id="markdown-toc-security-best-practices">Security Best Practices</a>    <ol>
+      <li><a href="#login-security" id="markdown-toc-login-security">Login Security</a></li>
+      <li><a href="#file-security" id="markdown-toc-file-security">File Security</a></li>
+      <li><a href="#database-security" id="markdown-toc-database-security">Database Security</a></li>
+    </ol>
+  </li>
+  <li><a href="#incident-response" id="markdown-toc-incident-response">Incident Response</a>    <ol>
+      <li><a href="#suspected-hack" id="markdown-toc-suspected-hack">Suspected Hack</a></li>
+      <li><a href="#response-procedures" id="markdown-toc-response-procedures">Response Procedures</a></li>
+    </ol>
+  </li>
+  <li><a href="#security-tools" id="markdown-toc-security-tools">Security Tools</a>    <ol>
+      <li><a href="#recommended-plugins" id="markdown-toc-recommended-plugins">Recommended Plugins</a></li>
+      <li><a href="#external-tools" id="markdown-toc-external-tools">External Tools</a></li>
+    </ol>
+  </li>
+  <li><a href="#documentation" id="markdown-toc-documentation">Documentation</a>    <ol>
+      <li><a href="#security-log-template" id="markdown-toc-security-log-template">Security Log Template</a></li>
+      <li><a href="#incident-report-template" id="markdown-toc-incident-report-template">Incident Report Template</a></li>
+    </ol>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="overview">Overview</h2>
+
+<p>Regular security checks protect the website from threats, unauthorized access, and data breaches. This guide covers routine security monitoring and response procedures.</p>
+
+<blockquote class="warning">
+  <p>Security is everyone’s responsibility. Report suspicious activity immediately.</p>
+</blockquote>
+
+<h2 id="security-check-schedule">Security Check Schedule</h2>
+
+<h3 id="daily-checks-5-minutes">Daily Checks (5 minutes)</h3>
+<ul>
+  <li>Monitor login attempts</li>
+  <li>Check security plugin alerts</li>
+  <li>Review 404 errors</li>
+  <li>Verify backups completed</li>
+</ul>
+
+<h3 id="weekly-checks-30-minutes">Weekly Checks (30 minutes)</h3>
+<ul>
+  <li>Review user accounts</li>
+  <li>Check file changes</li>
+  <li>Scan error logs</li>
+  <li>Update security rules</li>
+</ul>
+
+<h3 id="monthly-checks-2-hours">Monthly Checks (2 hours)</h3>
+<ul>
+  <li>Full security audit</li>
+  <li>Update passwords</li>
+  <li>Review permissions</li>
+  <li>Test incident response</li>
+</ul>
+
+<h2 id="daily-security-monitoring">Daily Security Monitoring</h2>
+
+<h3 id="1-check-security-dashboard">1. Check Security Dashboard</h3>
+
+<p><strong>Via Security Plugin (Wordfence/Sucuri)</strong></p>
+<ol>
+  <li>Login to WordPress admin</li>
+  <li>Navigate to security plugin</li>
+  <li>Check dashboard for:
+    <ul class="task-list">
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Active threats</li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Blocked attacks</li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Failed logins</li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />File changes</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="2-review-login-activity">2. Review Login Activity</h3>
+
+<blockquote class="important">
+  <p>Multiple failed logins may indicate attack attempt</p>
+</blockquote>
+
+<p><strong>Check for:</strong></p>
+<ul>
+  <li>Unusual login times</li>
+  <li>Unknown IP addresses</li>
+  <li>Multiple username attempts</li>
+  <li>Admin login attempts</li>
+</ul>
+
+<p><strong>Red Flags:</strong></p>
+<ul>
+  <li>10+ failed attempts from one IP</li>
+  <li>Login attempts at 3 AM</li>
+  <li>Unknown usernames tried</li>
+  <li>Direct wp-admin access attempts</li>
+</ul>
+
+<h3 id="3-monitor-404-errors">3. Monitor 404 Errors</h3>
+
+<p><strong>Common Attack Patterns:</strong></p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">/wp-config.php</code> attempts</li>
+  <li><code class="language-plaintext highlighter-rouge">/backup/</code> directory scans</li>
+  <li>Random <code class="language-plaintext highlighter-rouge">.zip</code> file requests</li>
+  <li>Admin file fishing</li>
+</ul>
+
+<h2 id="weekly-security-tasks">Weekly Security Tasks</h2>
+
+<h3 id="1-user-account-audit">1. User Account Audit</h3>
+
+<p><strong>Review All Users:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Users → All Users
+Check for:
+- [ ] Unknown accounts
+- [ ] Correct role assignments
+- [ ] Inactive accounts
+- [ ] Strong passwords enabled
+</code></pre></div></div>
+
+<p><strong>Actions:</strong></p>
+<ul>
+  <li>Remove unknown users</li>
+  <li>Downgrade unnecessary admins</li>
+  <li>Disable inactive accounts</li>
+  <li>Force password resets if needed</li>
+</ul>
+
+<h3 id="2-file-integrity-check">2. File Integrity Check</h3>
+
+<p><strong>Via Security Plugin:</strong></p>
+<ol>
+  <li>Run file scan</li>
+  <li>Compare to known files</li>
+  <li>Identify changes:
+    <ul>
+      <li>Modified core files</li>
+      <li>New unknown files</li>
+      <li>Permission changes</li>
+    </ul>
+  </li>
+</ol>
+
+<p><strong>Manual Check:</strong></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Via SSH/FTP</span>
+<span class="c"># Check recently modified files</span>
+find <span class="nb">.</span> <span class="nt">-type</span> f <span class="nt">-mtime</span> <span class="nt">-7</span>
+</code></pre></div></div>
+
+<h3 id="3-plugintheme-audit">3. Plugin/Theme Audit</h3>
+
+<blockquote class="tip">
+  <p>Deactivated plugins can still be security risks</p>
+</blockquote>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Remove unused plugins</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Delete deactivated themes</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Check for abandoned plugins</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Verify official sources</li>
+</ul>
+
+<h2 id="monthly-security-audit">Monthly Security Audit</h2>
+
+<h3 id="1-comprehensive-scan">1. Comprehensive Scan</h3>
+
+<p><strong>Full Malware Scan:</strong></p>
+<ol>
+  <li>Use security plugin scan</li>
+  <li>Include all files</li>
+  <li>Deep scan database</li>
+  <li>Check for:
+    <ul>
+      <li>Malicious code</li>
+      <li>Backdoors</li>
+      <li>Spam content</li>
+      <li>Suspicious redirects</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="2-password-security">2. Password Security</h3>
+
+<p><strong>Update Critical Passwords:</strong></p>
+<ul>
+  <li>WordPress admin accounts</li>
+  <li>Database passwords</li>
+  <li>FTP/SSH credentials</li>
+  <li>Email accounts</li>
+</ul>
+
+<p><strong>Password Requirements:</strong></p>
+<ul>
+  <li>Minimum 16 characters</li>
+  <li>Random generation</li>
+  <li>Unique per service</li>
+  <li>Stored securely</li>
+</ul>
+
+<h3 id="3-permission-review">3. Permission Review</h3>
+
+<p><strong>File Permissions:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Correct permissions:
+- Files: 644
+- Folders: 755
+- wp-config.php: 640
+- .htaccess: 644
+</code></pre></div></div>
+
+<p><strong>Database Permissions:</strong></p>
+<ul>
+  <li>WordPress user: SELECT, INSERT, UPDATE, DELETE</li>
+  <li>No CREATE/DROP permissions</li>
+  <li>Separate users for different sites</li>
+</ul>
+
+<h3 id="4-ssl-certificate">4. SSL Certificate</h3>
+
+<p><strong>Check Certificate:</strong></p>
+<ul>
+  <li>Expiration date</li>
+  <li>Proper installation</li>
+  <li>No mixed content warnings</li>
+  <li>HTTPS enforcement</li>
+</ul>
+
+<h2 id="security-best-practices">Security Best Practices</h2>
+
+<h3 id="login-security">Login Security</h3>
+
+<ol>
+  <li><strong>Two-Factor Authentication</strong>
+    <ul>
+      <li>Enable for all users</li>
+      <li>Mandatory for admins</li>
+      <li>Use authenticator apps</li>
+    </ul>
+  </li>
+  <li><strong>Login Restrictions</strong>
+    <ul>
+      <li>Limit login attempts</li>
+      <li>Hide login errors</li>
+      <li>Change login URL</li>
+      <li>IP whitelist for admins</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="file-security">File Security</h3>
+
+<ol>
+  <li><strong>Disable File Editing</strong>
+    <div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Add to wp-config.php</span>
+<span class="nb">define</span><span class="p">(</span><span class="s1">'DISALLOW_FILE_EDIT'</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
+</code></pre></div>    </div>
+  </li>
+  <li><strong>Protect Sensitive Files</strong>
+    <div class="language-apache highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># .htaccess rules</span>
+<span class="p">&lt;</span><span class="nl">Files</span><span class="sr"> wp-config.php</span><span class="p">&gt;
+</span><span class="nc">order</span> allow,deny
+<span class="nc">deny</span> <span class="ss">from</span> <span class="ss">all</span>
+<span class="p">&lt;/</span><span class="nl">Files</span><span class="p">&gt;
+</span></code></pre></div>    </div>
+  </li>
+</ol>
+
+<h3 id="database-security">Database Security</h3>
+
+<ol>
+  <li><strong>Change Table Prefix</strong>
+    <ul>
+      <li>Use custom prefix</li>
+      <li>Not default <code class="language-plaintext highlighter-rouge">wp_</code></li>
+    </ul>
+  </li>
+  <li><strong>Regular Backups</strong>
+    <ul>
+      <li>Before any changes</li>
+      <li>Encrypted storage</li>
+      <li>Test restoration</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="incident-response">Incident Response</h2>
+
+<h3 id="suspected-hack">Suspected Hack</h3>
+
+<blockquote class="warning">
+  <p>If you suspect a hack, act immediately but carefully</p>
+</blockquote>
+
+<ol>
+  <li><strong>Don’t Panic</strong>
+    <ul>
+      <li>Document everything</li>
+      <li>Don’t delete evidence</li>
+      <li>Take screenshots</li>
+    </ul>
+  </li>
+  <li><strong>Immediate Actions</strong>
+    <ul class="task-list">
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Put site in maintenance mode</li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Change all passwords</li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Backup current state</li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Notify stakeholders</li>
+    </ul>
+  </li>
+  <li><strong>Investigation</strong>
+    <ul>
+      <li>Review recent changes</li>
+      <li>Check file modifications</li>
+      <li>Scan for malware</li>
+      <li>Review access logs</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="response-procedures">Response Procedures</h3>
+
+<p><strong>Minor Incident (Spam posts)</strong></p>
+<ol>
+  <li>Delete spam content</li>
+  <li>Check for user compromise</li>
+  <li>Strengthen security</li>
+  <li>Monitor for recurrence</li>
+</ol>
+
+<p><strong>Major Incident (Site defaced)</strong></p>
+<ol>
+  <li>Take site offline</li>
+  <li>Restore from clean backup</li>
+  <li>Investigate entry point</li>
+  <li>Patch vulnerabilities</li>
+  <li>Change all credentials</li>
+  <li>Monitor closely</li>
+</ol>
+
+<h2 id="security-tools">Security Tools</h2>
+
+<h3 id="recommended-plugins">Recommended Plugins</h3>
+<ul>
+  <li><strong>Wordfence</strong>: Comprehensive security</li>
+  <li><strong>Sucuri</strong>: Malware scanning</li>
+  <li><strong>iThemes Security</strong>: Hardening</li>
+  <li><strong>WP Activity Log</strong>: Audit trail</li>
+</ul>
+
+<h3 id="external-tools">External Tools</h3>
+<ul>
+  <li><strong>VirusTotal</strong>: File scanning</li>
+  <li><strong>Qualys SSL Test</strong>: SSL verification</li>
+  <li><strong>Have I Been Pwned</strong>: Breach checking</li>
+  <li><strong>Google Safe Browsing</strong>: Blacklist check</li>
+</ul>
+
+<h2 id="documentation">Documentation</h2>
+
+<h3 id="security-log-template">Security Log Template</h3>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gu">## Security Check Log - [DATE]</span>
+
+<span class="gu">### Daily Checks</span>
+<span class="p">-</span> [ ] No active threats
+<span class="p">-</span> [ ] Failed logins: [number]
+<span class="p">-</span> [ ] 404 errors reviewed
+<span class="p">-</span> [ ] Backups verified
+
+<span class="gu">### Issues Found</span>
+<span class="p">1.</span> Issue: [Description]
+   Action: [What was done]
+   Status: [Resolved/Monitoring]
+
+<span class="gu">### Weekly Tasks</span>
+<span class="p">-</span> [ ] User audit complete
+<span class="p">-</span> [ ] File scan clean
+<span class="p">-</span> [ ] Plugins reviewed
+
+<span class="gu">### Notes</span>
+[Any observations or concerns]
+
+Checked by: [Name]
+Time: [Duration]
+</code></pre></div></div>
+
+<h3 id="incident-report-template">Incident Report Template</h3>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gu">## Security Incident Report</span>
+
+Date: [DATE]
+Severity: [Low/Medium/High/Critical]
+
+<span class="gu">### Description</span>
+[What happened]
+
+<span class="gu">### Impact</span>
+[What was affected]
+
+<span class="gu">### Response Actions</span>
+<span class="p">1.</span> [Action taken]
+<span class="p">2.</span> [Action taken]
+
+<span class="gu">### Root Cause</span>
+[How it happened]
+
+<span class="gu">### Prevention</span>
+[Steps to prevent recurrence]
+
+<span class="gu">### Follow-up</span>
+[Required actions]
+</code></pre></div></div>
+
+<hr />
+
+<p>*Last updated: *</p>

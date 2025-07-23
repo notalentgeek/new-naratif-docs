@@ -1,0 +1,373 @@
+<h1 class="no_toc" id="plugin-updates">Plugin Updates</h1>
+
+<h2 class="no_toc text-delta" id="table-of-contents">Table of contents</h2>
+
+<ol id="markdown-toc">
+  <li><a href="#overview" id="markdown-toc-overview">Overview</a></li>
+  <li><a href="#update-schedule" id="markdown-toc-update-schedule">Update Schedule</a>    <ol>
+      <li><a href="#critical-security-updates" id="markdown-toc-critical-security-updates">Critical Security Updates</a></li>
+      <li><a href="#regular-updates" id="markdown-toc-regular-updates">Regular Updates</a></li>
+      <li><a href="#major-updates" id="markdown-toc-major-updates">Major Updates</a></li>
+    </ol>
+  </li>
+  <li><a href="#pre-update-checklist" id="markdown-toc-pre-update-checklist">Pre-Update Checklist</a>    <ol>
+      <li><a href="#1-preparation" id="markdown-toc-1-preparation">1. Preparation</a></li>
+      <li><a href="#2-documentation" id="markdown-toc-2-documentation">2. Documentation</a></li>
+      <li><a href="#3-communication" id="markdown-toc-3-communication">3. Communication</a></li>
+    </ol>
+  </li>
+  <li><a href="#update-process" id="markdown-toc-update-process">Update Process</a>    <ol>
+      <li><a href="#step-1-backup-everything" id="markdown-toc-step-1-backup-everything">Step 1: Backup Everything</a></li>
+      <li><a href="#step-2-test-on-staging" id="markdown-toc-step-2-test-on-staging">Step 2: Test on Staging</a></li>
+      <li><a href="#step-3-update-production" id="markdown-toc-step-3-update-production">Step 3: Update Production</a></li>
+      <li><a href="#step-4-post-update-testing" id="markdown-toc-step-4-post-update-testing">Step 4: Post-Update Testing</a></li>
+    </ol>
+  </li>
+  <li><a href="#plugin-specific-procedures" id="markdown-toc-plugin-specific-procedures">Plugin-Specific Procedures</a>    <ol>
+      <li><a href="#critical-plugins" id="markdown-toc-critical-plugins">Critical Plugins</a></li>
+      <li><a href="#testing-requirements-by-plugin-type" id="markdown-toc-testing-requirements-by-plugin-type">Testing Requirements by Plugin Type</a></li>
+    </ol>
+  </li>
+  <li><a href="#troubleshooting-updates" id="markdown-toc-troubleshooting-updates">Troubleshooting Updates</a>    <ol>
+      <li><a href="#update-fails" id="markdown-toc-update-fails">Update Fails</a></li>
+      <li><a href="#compatibility-issues" id="markdown-toc-compatibility-issues">Compatibility Issues</a></li>
+    </ol>
+  </li>
+  <li><a href="#rollback-procedures" id="markdown-toc-rollback-procedures">Rollback Procedures</a>    <ol>
+      <li><a href="#quick-rollback" id="markdown-toc-quick-rollback">Quick Rollback</a></li>
+      <li><a href="#manual-rollback" id="markdown-toc-manual-rollback">Manual Rollback</a></li>
+    </ol>
+  </li>
+  <li><a href="#best-practices" id="markdown-toc-best-practices">Best Practices</a>    <ol>
+      <li><a href="#dos" id="markdown-toc-dos">Do’s</a></li>
+      <li><a href="#donts" id="markdown-toc-donts">Don’ts</a></li>
+    </ol>
+  </li>
+  <li><a href="#update-log-template" id="markdown-toc-update-log-template">Update Log Template</a></li>
+  <li><a href="#monthly-audit" id="markdown-toc-monthly-audit">Monthly Audit</a></li>
+</ol>
+
+<hr />
+
+<h2 id="overview">Overview</h2>
+
+<p>Regular plugin updates are critical for security, performance, and compatibility. This guide provides a safe, systematic approach to updating WordPress plugins.</p>
+
+<blockquote class="warning">
+  <p>Never update plugins directly on production without testing first!</p>
+</blockquote>
+
+<h2 id="update-schedule">Update Schedule</h2>
+
+<h3 id="critical-security-updates">Critical Security Updates</h3>
+<ul>
+  <li><strong>When</strong>: Immediately (within 24 hours)</li>
+  <li><strong>What</strong>: Security patches, vulnerability fixes</li>
+  <li><strong>Process</strong>: Fast-track testing</li>
+</ul>
+
+<h3 id="regular-updates">Regular Updates</h3>
+<ul>
+  <li><strong>When</strong>: Weekly (Thursdays 10 AM)</li>
+  <li><strong>What</strong>: Feature updates, bug fixes</li>
+  <li><strong>Process</strong>: Standard testing</li>
+</ul>
+
+<h3 id="major-updates">Major Updates</h3>
+<ul>
+  <li><strong>When</strong>: Monthly maintenance window</li>
+  <li><strong>What</strong>: Major version changes</li>
+  <li><strong>Process</strong>: Extended testing</li>
+</ul>
+
+<h2 id="pre-update-checklist">Pre-Update Checklist</h2>
+
+<h3 id="1-preparation">1. Preparation</h3>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Check current plugin versions</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Read update changelogs</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Verify backup is recent (within 24 hours)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Note any custom modifications</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Check plugin compatibility</li>
+</ul>
+
+<h3 id="2-documentation">2. Documentation</h3>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />List plugins to update</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Note current versions</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Document expected changes</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Identify dependencies</li>
+</ul>
+
+<h3 id="3-communication">3. Communication</h3>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Notify team of maintenance</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Set “maintenance mode” if needed</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Prepare rollback plan</li>
+</ul>
+
+<h2 id="update-process">Update Process</h2>
+
+<h3 id="step-1-backup-everything">Step 1: Backup Everything</h3>
+
+<blockquote class="important">
+  <p>Always create a full backup before any updates</p>
+</blockquote>
+
+<ol>
+  <li><strong>Via CloudWays</strong>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CloudWays → Backups → Create Backup
+Name: Pre-plugin-update-YYYY-MM-DD
+</code></pre></div>    </div>
+  </li>
+  <li><strong>Verify Backup</strong>
+    <ul>
+      <li>Check backup completed</li>
+      <li>Note backup location</li>
+      <li>Test restore process (monthly)</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="step-2-test-on-staging">Step 2: Test on Staging</h3>
+
+<ol>
+  <li><strong>Access Staging Site</strong>
+    <ul>
+      <li>URL: <code class="language-plaintext highlighter-rouge">staging.newnaratif.com</code></li>
+      <li>Ensure staging matches production</li>
+    </ul>
+  </li>
+  <li><strong>Update Process</strong>
+    <ul>
+      <li>Go to Plugins → Installed Plugins</li>
+      <li>Click “Update Available” filter</li>
+      <li>Update one plugin at a time</li>
+    </ul>
+  </li>
+  <li><strong>Test Each Update</strong>
+    <ul>
+      <li>Check plugin functionality</li>
+      <li>Test related features</li>
+      <li>Look for conflicts</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="step-3-update-production">Step 3: Update Production</h3>
+
+<blockquote class="tip">
+  <p>Update during low-traffic periods (early morning)</p>
+</blockquote>
+
+<ol>
+  <li><strong>Single Plugin Update</strong>
+    <ul>
+      <li>Select one plugin</li>
+      <li>Click “Update”</li>
+      <li>Wait for completion</li>
+      <li>Test immediately</li>
+    </ul>
+  </li>
+  <li><strong>Bulk Updates</strong> (Use Cautiously)
+    <ul>
+      <li>Select multiple plugins</li>
+      <li>Bulk Actions → Update</li>
+      <li>Only for minor updates</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="step-4-post-update-testing">Step 4: Post-Update Testing</h3>
+
+<p><strong>Immediate Checks:</strong></p>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Site loads properly</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Admin dashboard accessible</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Key functionality works</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />No error messages</li>
+</ul>
+
+<p><strong>Thorough Testing:</strong></p>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Homepage displays correctly</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Posts/pages load</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Forms submit properly</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Payment processing (if applicable)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Member areas accessible</li>
+</ul>
+
+<h2 id="plugin-specific-procedures">Plugin-Specific Procedures</h2>
+
+<h3 id="critical-plugins">Critical Plugins</h3>
+
+<p><strong>Elementor</strong></p>
+<ul>
+  <li>Always update Elementor Pro first</li>
+  <li>Then update base Elementor</li>
+  <li>Regenerate CSS after update</li>
+  <li>Test all page templates</li>
+</ul>
+
+<p><strong>WooCommerce</strong></p>
+<ul>
+  <li>Update during maintenance window</li>
+  <li>Test checkout process</li>
+  <li>Verify payment gateways</li>
+  <li>Check member subscriptions</li>
+</ul>
+
+<p><strong>Security Plugins</strong></p>
+<ul>
+  <li>Update immediately for security patches</li>
+  <li>Review new security rules</li>
+  <li>Check for false positives</li>
+  <li>Verify firewall rules</li>
+</ul>
+
+<h3 id="testing-requirements-by-plugin-type">Testing Requirements by Plugin Type</h3>
+
+<p><strong>SEO Plugins</strong>: Check meta data, sitemaps
+<strong>Cache Plugins</strong>: Clear all caches, test speed
+<strong>Form Plugins</strong>: Submit test entries
+<strong>Gallery Plugins</strong>: Verify image display
+<strong>Social Plugins</strong>: Test sharing functions</p>
+
+<h2 id="troubleshooting-updates">Troubleshooting Updates</h2>
+
+<h3 id="update-fails">Update Fails</h3>
+
+<p><strong>White Screen of Death</strong></p>
+<ol>
+  <li>Access via FTP/SSH</li>
+  <li>Rename problem plugin folder</li>
+  <li>Access WordPress admin</li>
+  <li>Reinstall or restore</li>
+</ol>
+
+<p><strong>Update Stuck</strong></p>
+<ol>
+  <li>Wait 5 minutes</li>
+  <li>Refresh page</li>
+  <li>Check via FTP if files updated</li>
+  <li>Clear cache and retry</li>
+</ol>
+
+<h3 id="compatibility-issues">Compatibility Issues</h3>
+
+<p><strong>Plugin Conflicts</strong></p>
+<ol>
+  <li>Deactivate all plugins</li>
+  <li>Reactivate one by one</li>
+  <li>Identify conflict pair</li>
+  <li>Seek alternatives or wait for fix</li>
+</ol>
+
+<p><strong>PHP Errors</strong></p>
+<ol>
+  <li>Check PHP version compatibility</li>
+  <li>Enable debug mode</li>
+  <li>Review error logs</li>
+  <li>Contact plugin support</li>
+</ol>
+
+<h2 id="rollback-procedures">Rollback Procedures</h2>
+
+<h3 id="quick-rollback">Quick Rollback</h3>
+
+<ol>
+  <li><strong>Via Plugin</strong>
+    <ul>
+      <li>Use WP Rollback plugin</li>
+      <li>Select previous version</li>
+      <li>Rollback individual plugin</li>
+    </ul>
+  </li>
+  <li><strong>Via Backup</strong>
+    <ul>
+      <li>Restore from CloudWays backup</li>
+      <li>Affects entire site</li>
+      <li>Use for multiple failures</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="manual-rollback">Manual Rollback</h3>
+
+<ol>
+  <li><strong>Download Previous Version</strong>
+    <ul>
+      <li>Get from WordPress.org</li>
+      <li>Or from backup files</li>
+    </ul>
+  </li>
+  <li><strong>Upload via FTP</strong>
+    <ul>
+      <li>Delete current plugin folder</li>
+      <li>Upload previous version</li>
+      <li>Reactivate in WordPress</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="best-practices">Best Practices</h2>
+
+<h3 id="dos">Do’s</h3>
+<ul>
+  <li>✅ Update one plugin at a time</li>
+  <li>✅ Test thoroughly on staging</li>
+  <li>✅ Keep detailed logs</li>
+  <li>✅ Monitor site after updates</li>
+  <li>✅ Maintain update schedule</li>
+</ul>
+
+<h3 id="donts">Don’ts</h3>
+<ul>
+  <li>❌ Update everything at once</li>
+  <li>❌ Skip changelog review</li>
+  <li>❌ Update during peak hours</li>
+  <li>❌ Ignore backup verification</li>
+  <li>❌ Rush major updates</li>
+</ul>
+
+<h2 id="update-log-template">Update Log Template</h2>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gu">## Plugin Update Log - [DATE]</span>
+
+<span class="gu">### Updated Plugins</span>
+<span class="p">1.</span> Plugin Name: v1.0 → v1.1
+<span class="p">   -</span> Changes: Bug fixes
+<span class="p">   -</span> Tested: ✓
+<span class="p">   -</span> Issues: None
+<span class="p">
+2.</span> Plugin Name: v2.0 → v3.0
+<span class="p">   -</span> Changes: Major update
+<span class="p">   -</span> Tested: ✓
+<span class="p">   -</span> Issues: Minor CSS adjustment needed
+
+<span class="gu">### Testing Results</span>
+<span class="p">-</span> Staging: [PASS/FAIL]
+<span class="p">-</span> Production: [PASS/FAIL]
+<span class="p">-</span> Rollbacks: [None/List]
+
+<span class="gu">### Notes</span>
+[Any additional observations]
+
+<span class="gu">### Sign-off</span>
+Updated by: [Name]
+Verified by: [Name]
+</code></pre></div></div>
+
+<h2 id="monthly-audit">Monthly Audit</h2>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Review all installed plugins</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Check for abandoned plugins</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Remove unused plugins</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Update compatibility matrix</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Plan major updates</li>
+</ul>
+
+<hr />
+
+<p>*Last updated: *</p>

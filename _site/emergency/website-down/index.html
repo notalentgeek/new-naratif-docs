@@ -1,0 +1,130 @@
+<h1 class="no_toc" id="website-is-down">Website is Down</h1>
+
+<h2 class="no_toc text-delta" id="table-of-contents">Table of contents</h2>
+
+<ol id="markdown-toc">
+  <li><a href="#initial-checks-5-minutes" id="markdown-toc-initial-checks-5-minutes">Initial Checks (5 minutes)</a>    <ol>
+      <li><a href="#1-verify-the-issue" id="markdown-toc-1-verify-the-issue">1. Verify the Issue</a></li>
+      <li><a href="#2-check-cloudways-status" id="markdown-toc-2-check-cloudways-status">2. Check CloudWays Status</a></li>
+      <li><a href="#3-domain-status" id="markdown-toc-3-domain-status">3. Domain Status</a></li>
+    </ol>
+  </li>
+  <li><a href="#immediate-actions" id="markdown-toc-immediate-actions">Immediate Actions</a>    <ol>
+      <li><a href="#if-server-is-down" id="markdown-toc-if-server-is-down">If Server is Down</a></li>
+      <li><a href="#if-server-is-up-but-site-is-down" id="markdown-toc-if-server-is-up-but-site-is-down">If Server is Up but Site is Down</a></li>
+    </ol>
+  </li>
+  <li><a href="#escalation-path" id="markdown-toc-escalation-path">Escalation Path</a></li>
+  <li><a href="#post-incident" id="markdown-toc-post-incident">Post-Incident</a></li>
+</ol>
+
+<hr />
+
+<blockquote class="warning">
+  <p><strong>CRITICAL</strong>: If the website is completely inaccessible, this is a P1 emergency. Follow these steps immediately.</p>
+</blockquote>
+
+<h2 id="initial-checks-5-minutes">Initial Checks (5 minutes)</h2>
+
+<h3 id="1-verify-the-issue">1. Verify the Issue</h3>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Open <a href="https://newnaratif.com">https://newnaratif.com</a> in an incognito window</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Check from mobile data (not WiFi) to rule out local issues</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Try <a href="https://www.isitdownrightnow.com">https://www.isitdownrightnow.com</a> to confirm</li>
+</ul>
+
+<h3 id="2-check-cloudways-status">2. Check CloudWays Status</h3>
+<ol>
+  <li>Log into <a href="https://platform.cloudways.com">CloudWays Platform</a>
+    <ul>
+      <li>Username: [stored securely]</li>
+      <li>Password: [stored securely]</li>
+    </ul>
+  </li>
+  <li>Check server status indicator</li>
+  <li>Look for any warning messages</li>
+</ol>
+
+<h3 id="3-domain-status">3. Domain Status</h3>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Check domain expiration at registrar</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Verify DNS is resolving: <code class="language-plaintext highlighter-rouge">nslookup newnaratif.com</code></li>
+</ul>
+
+<h2 id="immediate-actions">Immediate Actions</h2>
+
+<blockquote class="important">
+  <p>Document all actions taken with timestamps in the incident log.</p>
+</blockquote>
+
+<h3 id="if-server-is-down">If Server is Down</h3>
+<ol>
+  <li><strong>Contact CloudWays Support</strong>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Support Email: support@cloudways.com
+Live Chat: Available in platform
+Priority: URGENT - Production Down
+</code></pre></div>    </div>
+  </li>
+  <li><strong>Provide Information:</strong>
+    <ul>
+      <li>Server ID: [YOUR_SERVER_ID]</li>
+      <li>Application: New Naratif WordPress</li>
+      <li>Issue: Complete site outage</li>
+      <li>Time noticed: [TIMESTAMP]</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="if-server-is-up-but-site-is-down">If Server is Up but Site is Down</h3>
+
+<ol>
+  <li><strong>Restart Services via CloudWays</strong>
+    <ul>
+      <li>Navigate to Server Management</li>
+      <li>Click “Services” tab</li>
+      <li>Restart Apache/Nginx</li>
+      <li>Restart MySQL</li>
+      <li>Clear Varnish Cache</li>
+    </ul>
+  </li>
+  <li><strong>Check WordPress via SSH</strong>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh <span class="o">[</span>username]@[server-ip]
+<span class="nb">cd </span>applications/[app-name]/public_html
+wp core verify-checksums
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h2 id="escalation-path">Escalation Path</h2>
+
+<p>If not resolved within 30 minutes:</p>
+
+<ol>
+  <li><strong>Internal Escalation</strong>
+    <ul>
+      <li>Primary: [Developer Name] - [Phone]</li>
+      <li>Secondary: [Manager Name] - [Phone]</li>
+      <li>Tertiary: [CTO/Technical Lead] - [Phone]</li>
+    </ul>
+  </li>
+  <li><strong>External Support</strong>
+    <ul>
+      <li>CloudWays Premium Support: [Ticket Number]</li>
+      <li>WordPress Expert: [Contractor Details]</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="post-incident">Post-Incident</h2>
+
+<p>Once resolved:</p>
+<ol>
+  <li>Document root cause</li>
+  <li>Update this procedure if needed</li>
+  <li>Schedule post-mortem meeting</li>
+  <li>Notify all stakeholders</li>
+</ol>
+
+<hr />
+
+<p>*Last updated: *</p>

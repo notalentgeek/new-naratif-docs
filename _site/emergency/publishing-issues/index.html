@@ -1,0 +1,185 @@
+<h1 class="no_toc" id="cannot-publish-content">Cannot Publish Content</h1>
+
+<h2 class="no_toc text-delta" id="table-of-contents">Table of contents</h2>
+
+<ol id="markdown-toc">
+  <li><a href="#quick-diagnostics" id="markdown-toc-quick-diagnostics">Quick Diagnostics</a>    <ol>
+      <li><a href="#1-user-permissions-check" id="markdown-toc-1-user-permissions-check">1. User Permissions Check</a></li>
+      <li><a href="#2-browser-issues" id="markdown-toc-2-browser-issues">2. Browser Issues</a></li>
+      <li><a href="#3-wordpress-admin-check" id="markdown-toc-3-wordpress-admin-check">3. WordPress Admin Check</a></li>
+    </ol>
+  </li>
+  <li><a href="#common-publishing-issues" id="markdown-toc-common-publishing-issues">Common Publishing Issues</a>    <ol>
+      <li><a href="#issue-publishing-failed-error" id="markdown-toc-issue-publishing-failed-error">Issue: “Publishing Failed” Error</a></li>
+      <li><a href="#issue-stuck-in-updating-or-publishing" id="markdown-toc-issue-stuck-in-updating-or-publishing">Issue: Stuck in “Updating” or “Publishing”</a></li>
+      <li><a href="#issue-block-editor-not-loading" id="markdown-toc-issue-block-editor-not-loading">Issue: Block Editor Not Loading</a></li>
+    </ol>
+  </li>
+  <li><a href="#alternative-publishing-methods" id="markdown-toc-alternative-publishing-methods">Alternative Publishing Methods</a>    <ol>
+      <li><a href="#method-1-quick-draft" id="markdown-toc-method-1-quick-draft">Method 1: Quick Draft</a></li>
+      <li><a href="#method-2-email-publishing" id="markdown-toc-method-2-email-publishing">Method 2: Email Publishing</a></li>
+      <li><a href="#method-3-wordpress-mobile-app" id="markdown-toc-method-3-wordpress-mobile-app">Method 3: WordPress Mobile App</a></li>
+    </ol>
+  </li>
+  <li><a href="#plugin-specific-issues" id="markdown-toc-plugin-specific-issues">Plugin-Specific Issues</a>    <ol>
+      <li><a href="#elementor-not-loading" id="markdown-toc-elementor-not-loading">Elementor Not Loading</a></li>
+      <li><a href="#yoast-seo-blocking" id="markdown-toc-yoast-seo-blocking">Yoast SEO Blocking</a></li>
+    </ol>
+  </li>
+  <li><a href="#escalation" id="markdown-toc-escalation">Escalation</a></li>
+  <li><a href="#prevention" id="markdown-toc-prevention">Prevention</a></li>
+</ol>
+
+<hr />
+
+<blockquote class="warning">
+  <p><strong>URGENT</strong>: If content cannot be published for time-sensitive materials, follow these steps immediately.</p>
+</blockquote>
+
+<h2 id="quick-diagnostics">Quick Diagnostics</h2>
+
+<h3 id="1-user-permissions-check">1. User Permissions Check</h3>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Verify user is logged in with correct account</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Check user role (should be Editor/Administrator)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Try logging out and back in</li>
+</ul>
+
+<h3 id="2-browser-issues">2. Browser Issues</h3>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Clear browser cache</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Try different browser</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Disable browser extensions</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Check JavaScript console for errors (F12)</li>
+</ul>
+
+<h3 id="3-wordpress-admin-check">3. WordPress Admin Check</h3>
+<ol>
+  <li>Navigate to Users → Your Profile</li>
+  <li>Verify your role and capabilities</li>
+  <li>Check if account is active</li>
+</ol>
+
+<h2 id="common-publishing-issues">Common Publishing Issues</h2>
+
+<h3 id="issue-publishing-failed-error">Issue: “Publishing Failed” Error</h3>
+
+<blockquote class="note">
+  <p>This is often due to REST API issues or plugin conflicts.</p>
+</blockquote>
+
+<p><strong>Solution Steps:</strong></p>
+<ol>
+  <li>Go to Settings → Permalinks</li>
+  <li>Click “Save Changes” (without changing anything)</li>
+  <li>Try publishing again</li>
+</ol>
+
+<p>If that fails:</p>
+<ol>
+  <li>Deactivate all plugins except essential ones</li>
+  <li>Try publishing</li>
+  <li>Reactivate plugins one by one to identify conflict</li>
+</ol>
+
+<h3 id="issue-stuck-in-updating-or-publishing">Issue: Stuck in “Updating” or “Publishing”</h3>
+
+<p><strong>Solution Steps:</strong></p>
+<ol>
+  <li>Wait 60 seconds</li>
+  <li>Refresh the page</li>
+  <li>Check if post actually published (Posts → All Posts)</li>
+  <li>If not published, copy content to clipboard</li>
+  <li>Create new post and paste content</li>
+</ol>
+
+<h3 id="issue-block-editor-not-loading">Issue: Block Editor Not Loading</h3>
+
+<p><strong>Solution Steps:</strong></p>
+<ol>
+  <li>Add <code class="language-plaintext highlighter-rouge">?classic-editor</code> to the URL</li>
+  <li>Or switch to Classic Editor temporarily:
+    <ul>
+      <li>Go to Posts → All Posts</li>
+      <li>Hover over post title</li>
+      <li>Click “Edit (Classic Editor)”</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="alternative-publishing-methods">Alternative Publishing Methods</h2>
+
+<h3 id="method-1-quick-draft">Method 1: Quick Draft</h3>
+<ol>
+  <li>Dashboard → Quick Draft</li>
+  <li>Add title and content</li>
+  <li>Save Draft</li>
+  <li>Edit and publish from Posts list</li>
+</ol>
+
+<h3 id="method-2-email-publishing">Method 2: Email Publishing</h3>
+<p>If configured:</p>
+<ol>
+  <li>Send email to [publishing-email@newnaratif.com]</li>
+  <li>Subject becomes title</li>
+  <li>Body becomes content</li>
+  <li>Check Posts → All Posts for draft</li>
+</ol>
+
+<h3 id="method-3-wordpress-mobile-app">Method 3: WordPress Mobile App</h3>
+<ol>
+  <li>Download WordPress app</li>
+  <li>Add site: newnaratif.com</li>
+  <li>Login with credentials</li>
+  <li>Create and publish from app</li>
+</ol>
+
+<h2 id="plugin-specific-issues">Plugin-Specific Issues</h2>
+
+<h3 id="elementor-not-loading">Elementor Not Loading</h3>
+<ol>
+  <li>Elementor → Tools → Regenerate CSS</li>
+  <li>Elementor → Tools → Sync Library</li>
+  <li>Clear Elementor cache</li>
+</ol>
+
+<h3 id="yoast-seo-blocking">Yoast SEO Blocking</h3>
+<ol>
+  <li>Temporarily ignore SEO warnings</li>
+  <li>Publish first, optimize later</li>
+  <li>Or disable Yoast temporarily</li>
+</ol>
+
+<h2 id="escalation">Escalation</h2>
+
+<p>If unable to publish after 15 minutes:</p>
+
+<ol>
+  <li><strong>Contact Developer</strong>
+    <ul>
+      <li></li>
+      <li>Provide error messages and screenshots</li>
+    </ul>
+  </li>
+  <li><strong>Emergency Workaround</strong>
+    <ul>
+      <li>Send content to team member who can publish</li>
+      <li>Post on social media with “full article coming soon”</li>
+      <li>Use backup publishing platform if available</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="prevention">Prevention</h2>
+
+<ul>
+  <li>Keep browser updated</li>
+  <li>Regular cache clearing</li>
+  <li>Don’t work on posts for too long without saving</li>
+  <li>Use draft autosave feature</li>
+  <li>Keep local backup of important content</li>
+</ul>
+
+<hr />
+
+<p>*Last updated: *</p>
