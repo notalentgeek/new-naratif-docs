@@ -28,6 +28,8 @@ Essential procedures and documentation for WordPress site management.
 - [Email Delivery Failed]({{ '/email-issues/' | relative_url }})
 
 ### 📅 Daily Operations
+- [**Elementor Complete Guide**]({{ '/elementor-complete-guide/' | relative_url }}) - Comprehensive page builder documentation
+- [**Elementor Quick Start**]({{ '/elementor-quick-start/' | relative_url }}) - 30-minute guide for beginners
 - [Publishing Articles]({{ '/publishing-content/' | relative_url }})
 - [Managing Media]({{ '/media-management/' | relative_url }})
 - [User Management]({{ '/user-management/' | relative_url }})

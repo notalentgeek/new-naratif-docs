@@ -1,0 +1,1031 @@
+<h1 class="no_toc" id="new-naratif-elementor-complete-guide">New Naratif Elementor Complete Guide</h1>
+
+<p class="fs-6 fw-300">A comprehensive guide to using Elementor for creating beautiful content at New Naratif.</p>
+
+<h2 class="no_toc text-delta" id="table-of-contents">Table of contents</h2>
+
+<ol id="markdown-toc">
+  <li><a href="#getting-started-with-elementor" id="markdown-toc-getting-started-with-elementor">Getting Started with Elementor</a>    <ol>
+      <li><a href="#introduction-to-elementor-at-new-naratif" id="markdown-toc-introduction-to-elementor-at-new-naratif">Introduction to Elementor at New Naratif</a></li>
+      <li><a href="#accessing-elementor-editor" id="markdown-toc-accessing-elementor-editor">Accessing Elementor Editor</a></li>
+      <li><a href="#understanding-the-interface" id="markdown-toc-understanding-the-interface">Understanding the Interface</a></li>
+      <li><a href="#elementor-vs-wordpress-editor-decision-tree" id="markdown-toc-elementor-vs-wordpress-editor-decision-tree">Elementor vs WordPress Editor Decision Tree</a></li>
+    </ol>
+  </li>
+  <li><a href="#elementor-fundamentals" id="markdown-toc-elementor-fundamentals">Elementor Fundamentals</a>    <ol>
+      <li><a href="#the-building-block-system" id="markdown-toc-the-building-block-system">The Building Block System</a></li>
+      <li><a href="#working-with-templates" id="markdown-toc-working-with-templates">Working with Templates</a></li>
+      <li><a href="#navigation-and-shortcuts" id="markdown-toc-navigation-and-shortcuts">Navigation and Shortcuts</a></li>
+    </ol>
+  </li>
+  <li><a href="#content-creation-workflows" id="markdown-toc-content-creation-workflows">Content Creation Workflows</a>    <ol>
+      <li><a href="#creating-new-pages-with-elementor" id="markdown-toc-creating-new-pages-with-elementor">Creating New Pages with Elementor</a></li>
+      <li><a href="#creating-new-posts-with-elementor" id="markdown-toc-creating-new-posts-with-elementor">Creating New Posts with Elementor</a></li>
+      <li><a href="#editing-existing-content" id="markdown-toc-editing-existing-content">Editing Existing Content</a></li>
+    </ol>
+  </li>
+  <li><a href="#essential-widgets-for-new-naratif" id="markdown-toc-essential-widgets-for-new-naratif">Essential Widgets for New Naratif</a>    <ol>
+      <li><a href="#text-and-typography" id="markdown-toc-text-and-typography">Text and Typography</a></li>
+      <li><a href="#media-management" id="markdown-toc-media-management">Media Management</a></li>
+      <li><a href="#interactive-elements" id="markdown-toc-interactive-elements">Interactive Elements</a></li>
+    </ol>
+  </li>
+  <li><a href="#new-naratif-specific-implementations" id="markdown-toc-new-naratif-specific-implementations">New Naratif-Specific Implementations</a>    <ol>
+      <li><a href="#brand-consistency-guidelines" id="markdown-toc-brand-consistency-guidelines">Brand Consistency Guidelines</a></li>
+      <li><a href="#common-page-layouts" id="markdown-toc-common-page-layouts">Common Page Layouts</a></li>
+      <li><a href="#social-sharing-integration" id="markdown-toc-social-sharing-integration">Social Sharing Integration</a></li>
+      <li><a href="#membership-ctas" id="markdown-toc-membership-ctas">Membership CTAs</a></li>
+    </ol>
+  </li>
+  <li><a href="#advanced-features" id="markdown-toc-advanced-features">Advanced Features</a>    <ol>
+      <li><a href="#dynamic-content" id="markdown-toc-dynamic-content">Dynamic Content</a></li>
+      <li><a href="#theme-builder" id="markdown-toc-theme-builder">Theme Builder</a></li>
+      <li><a href="#global-widgets" id="markdown-toc-global-widgets">Global Widgets</a></li>
+      <li><a href="#custom-css" id="markdown-toc-custom-css">Custom CSS</a></li>
+    </ol>
+  </li>
+  <li><a href="#performance-optimization" id="markdown-toc-performance-optimization">Performance Optimization</a>    <ol>
+      <li><a href="#known-performance-issues" id="markdown-toc-known-performance-issues">Known Performance Issues</a></li>
+      <li><a href="#best-practices-for-page-speed" id="markdown-toc-best-practices-for-page-speed">Best Practices for Page Speed</a></li>
+      <li><a href="#when-not-to-use-elementor" id="markdown-toc-when-not-to-use-elementor">When NOT to Use Elementor</a></li>
+    </ol>
+  </li>
+  <li><a href="#troubleshooting-guide" id="markdown-toc-troubleshooting-guide">Troubleshooting Guide</a>    <ol>
+      <li><a href="#common-issues-and-solutions" id="markdown-toc-common-issues-and-solutions">Common Issues and Solutions</a></li>
+      <li><a href="#conflict-resolution" id="markdown-toc-conflict-resolution">Conflict Resolution</a></li>
+      <li><a href="#emergency-recovery" id="markdown-toc-emergency-recovery">Emergency Recovery</a></li>
+    </ol>
+  </li>
+  <li><a href="#quick-reference" id="markdown-toc-quick-reference">Quick Reference</a>    <ol>
+      <li><a href="#essential-keyboard-shortcuts" id="markdown-toc-essential-keyboard-shortcuts">Essential Keyboard Shortcuts</a></li>
+      <li><a href="#widget-panel-icons" id="markdown-toc-widget-panel-icons">Widget Panel Icons</a></li>
+      <li><a href="#responsive-breakpoints" id="markdown-toc-responsive-breakpoints">Responsive Breakpoints</a></li>
+      <li><a href="#css-classes-for-custom-styling" id="markdown-toc-css-classes-for-custom-styling">CSS Classes for Custom Styling</a></li>
+      <li><a href="#performance-checklist" id="markdown-toc-performance-checklist">Performance Checklist</a></li>
+      <li><a href="#support-resources" id="markdown-toc-support-resources">Support Resources</a></li>
+    </ol>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="getting-started-with-elementor">Getting Started with Elementor</h2>
+
+<h3 id="introduction-to-elementor-at-new-naratif">Introduction to Elementor at New Naratif</h3>
+
+<p>Elementor is the primary page builder used at New Naratif for creating visually rich content. It provides a drag-and-drop interface that allows team members to create professional layouts without coding knowledge.</p>
+
+<p><strong>Current Implementation:</strong></p>
+<ul>
+  <li>Elementor Pro is installed and active</li>
+  <li>Integration with BuddyBoss child theme</li>
+  <li>Mixed content ecosystem (some posts use Elementor, others use standard WordPress editor)</li>
+  <li>Custom conditions implemented for theme builder compatibility</li>
+</ul>
+
+<h3 id="accessing-elementor-editor">Accessing Elementor Editor</h3>
+
+<p>There are three ways to access Elementor:</p>
+
+<ol>
+  <li><strong>From WordPress Admin:</strong>
+    <ul>
+      <li>Navigate to Pages or Posts</li>
+      <li>Hover over the item you want to edit</li>
+      <li>Click “Edit with Elementor”</li>
+    </ul>
+  </li>
+  <li><strong>From the WordPress Editor:</strong>
+    <ul>
+      <li>Open any page/post in WordPress editor</li>
+      <li>Click the “Edit with Elementor” button at the top</li>
+    </ul>
+  </li>
+  <li><strong>From the Frontend (when logged in):</strong>
+    <ul>
+      <li>Visit any Elementor-built page</li>
+      <li>Click “Edit with Elementor” in the admin bar</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="understanding-the-interface">Understanding the Interface</h3>
+
+<p>The Elementor interface consists of three main areas:</p>
+
+<p><strong>Left Panel (Widget Panel):</strong></p>
+<ul>
+  <li>Contains all available widgets</li>
+  <li>Settings for selected elements</li>
+  <li>Page settings and controls</li>
+  <li>Navigator for complex layouts</li>
+</ul>
+
+<p><strong>Center Canvas (Preview Area):</strong></p>
+<ul>
+  <li>Live preview of your page</li>
+  <li>Direct editing capabilities</li>
+  <li>Responsive preview options</li>
+  <li>Interactive design area</li>
+</ul>
+
+<p><strong>Bottom Bar (Tools Bar):</strong></p>
+<ul>
+  <li>Responsive mode switcher (Desktop/Tablet/Mobile)</li>
+  <li>Preview button</li>
+  <li>Update/Publish button</li>
+  <li>Settings menu</li>
+  <li>History (undo/redo)</li>
+</ul>
+
+<h3 id="elementor-vs-wordpress-editor-decision-tree">Elementor vs WordPress Editor Decision Tree</h3>
+
+<p>Use Elementor when:</p>
+<ul>
+  <li>Creating landing pages or campaign pages</li>
+  <li>Building complex layouts with multiple columns</li>
+  <li>Implementing custom designs outside standard templates</li>
+  <li>Creating membership or promotional pages</li>
+  <li>Developing interactive content with animations</li>
+</ul>
+
+<p>Use WordPress Editor when:</p>
+<ul>
+  <li>Publishing standard blog posts or articles</li>
+  <li>Creating simple text-based content</li>
+  <li>Working with contributors who don’t know Elementor</li>
+  <li>Optimizing for page speed (simple content)</li>
+  <li>Maintaining consistency with existing non-Elementor posts</li>
+</ul>
+
+<hr />
+
+<h2 id="elementor-fundamentals">Elementor Fundamentals</h2>
+
+<h3 id="the-building-block-system">The Building Block System</h3>
+
+<p>Elementor uses a hierarchical structure:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Section → Columns → Widgets
+</code></pre></div></div>
+
+<p><strong>Sections:</strong></p>
+<ul>
+  <li>The largest container element</li>
+  <li>Can be full-width or boxed</li>
+  <li>Contains one or more columns</li>
+  <li>Controls background, spacing, and layout</li>
+</ul>
+
+<p><strong>Creating a Section:</strong></p>
+<ol>
+  <li>Click the “+” button in the editor</li>
+  <li>Choose your column structure (1-6 columns)</li>
+  <li>Adjust column widths by dragging handles</li>
+  <li>Access section settings via right-click menu</li>
+</ol>
+
+<p><strong>Columns:</strong></p>
+<ul>
+  <li>Vertical divisions within sections</li>
+  <li>Responsive width controls</li>
+  <li>Can contain multiple widgets</li>
+  <li>Independent padding and margin settings</li>
+</ul>
+
+<p><strong>Widgets:</strong></p>
+<ul>
+  <li>Individual content elements</li>
+  <li>Dragged from left panel into columns</li>
+  <li>Each has specific settings and styling options</li>
+  <li>Can be duplicated, copied, or saved as global</li>
+</ul>
+
+<h3 id="working-with-templates">Working with Templates</h3>
+
+<p><strong>Using Existing Templates:</strong></p>
+<ol>
+  <li>Click the folder icon in the editor</li>
+  <li>Browse “My Templates” for saved designs</li>
+  <li>Select and insert into your page</li>
+  <li>Customize as needed</li>
+</ol>
+
+<p><strong>Creating Custom Templates:</strong></p>
+<ol>
+  <li>Design your layout</li>
+  <li>Right-click on the section</li>
+  <li>Select “Save as Template”</li>
+  <li>Name it descriptively (e.g., “Article-Header-Standard”)</li>
+  <li>Add tags for easy searching</li>
+</ol>
+
+<p><strong>Template Library Organization:</strong></p>
+<ul>
+  <li>Use naming conventions: <code class="language-plaintext highlighter-rouge">[Type]-[Purpose]-[Version]</code></li>
+  <li>Examples: <code class="language-plaintext highlighter-rouge">Landing-Membership-v2</code>, <code class="language-plaintext highlighter-rouge">Article-Header-Standard</code></li>
+  <li>Tag templates by department or campaign</li>
+  <li>Regularly review and clean unused templates</li>
+</ul>
+
+<h3 id="navigation-and-shortcuts">Navigation and Shortcuts</h3>
+
+<p><strong>Essential Keyboard Shortcuts:</strong></p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Ctrl/Cmd + Z</code>: Undo</li>
+  <li><code class="language-plaintext highlighter-rouge">Ctrl/Cmd + Shift + Z</code>: Redo</li>
+  <li><code class="language-plaintext highlighter-rouge">Ctrl/Cmd + D</code>: Duplicate element</li>
+  <li><code class="language-plaintext highlighter-rouge">Ctrl/Cmd + C/V</code>: Copy/Paste element</li>
+  <li><code class="language-plaintext highlighter-rouge">Ctrl/Cmd + Shift + V</code>: Paste style</li>
+  <li><code class="language-plaintext highlighter-rouge">Delete</code>: Remove selected element</li>
+  <li><code class="language-plaintext highlighter-rouge">Ctrl/Cmd + S</code>: Save current work</li>
+</ul>
+
+<p><strong>Navigator Panel:</strong></p>
+<ol>
+  <li>Click the navigator icon (bottom left)</li>
+  <li>See hierarchical view of all elements</li>
+  <li>Rename elements for clarity</li>
+  <li>Drag to reorder elements</li>
+  <li>Lock elements to prevent accidental changes</li>
+</ol>
+
+<hr />
+
+<h2 id="content-creation-workflows">Content Creation Workflows</h2>
+
+<h3 id="creating-new-pages-with-elementor">Creating New Pages with Elementor</h3>
+
+<p><strong>Step-by-Step Process:</strong></p>
+
+<ol>
+  <li><strong>Create the Page:</strong>
+    <ul>
+      <li>Go to Pages → Add New</li>
+      <li>Enter page title</li>
+      <li>Click “Edit with Elementor”</li>
+    </ul>
+  </li>
+  <li><strong>Choose Starting Point:</strong>
+    <ul>
+      <li>Start from scratch (blank canvas)</li>
+      <li>Use a template from library</li>
+      <li>Duplicate existing page structure</li>
+    </ul>
+  </li>
+  <li><strong>Build Your Layout:</strong>
+    <ul>
+      <li>Add sections and columns</li>
+      <li>Drag widgets into place</li>
+      <li>Configure widget settings</li>
+      <li>Apply styling and spacing</li>
+    </ul>
+  </li>
+  <li><strong>Optimize for Mobile:</strong>
+    <ul>
+      <li>Switch to tablet/mobile view</li>
+      <li>Adjust layouts for each breakpoint</li>
+      <li>Test interactive elements</li>
+      <li>Hide unnecessary elements on mobile</li>
+    </ul>
+  </li>
+  <li><strong>Configure Page Settings:</strong>
+    <ul>
+      <li>Click gear icon (bottom left)</li>
+      <li>Set page layout (full width/boxed)</li>
+      <li>Configure SEO settings</li>
+      <li>Add featured image if needed</li>
+    </ul>
+  </li>
+  <li><strong>Preview and Publish:</strong>
+    <ul>
+      <li>Preview in new tab</li>
+      <li>Test all links and forms</li>
+      <li>Check responsive behavior</li>
+      <li>Click “Publish” when ready</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="creating-new-posts-with-elementor">Creating New Posts with Elementor</h3>
+
+<p><strong>Important Consideration:</strong> Not all posts at New Naratif use Elementor. Evaluate whether your content needs custom design.</p>
+
+<p><strong>When to Use Elementor for Posts:</strong></p>
+<ul>
+  <li>Feature articles with custom layouts</li>
+  <li>Photo essays or visual stories</li>
+  <li>Interactive content pieces</li>
+  <li>Special reports with data visualization</li>
+</ul>
+
+<p><strong>Process:</strong></p>
+<ol>
+  <li>Posts → Add New</li>
+  <li>Add title and configure categories/tags</li>
+  <li>Click “Edit with Elementor”</li>
+  <li>Design your post layout</li>
+  <li>Ensure consistency with site styling</li>
+  <li>Test preview before publishing</li>
+</ol>
+
+<h3 id="editing-existing-content">Editing Existing Content</h3>
+
+<p><strong>For Elementor Content:</strong></p>
+<ol>
+  <li>Locate the page/post</li>
+  <li>Click “Edit with Elementor”</li>
+  <li>Make necessary changes</li>
+  <li>Update to save changes</li>
+</ol>
+
+<p><strong>Converting Standard Posts to Elementor:</strong></p>
+<ol>
+  <li>Open post in WordPress editor</li>
+  <li>Copy all content (Ctrl+A, Ctrl+C)</li>
+  <li>Click “Edit with Elementor”</li>
+  <li>Add Text Editor widget</li>
+  <li>Paste content</li>
+  <li>Format and enhance with Elementor features</li>
+  <li>Save as draft and preview thoroughly</li>
+</ol>
+
+<hr />
+
+<h2 id="essential-widgets-for-new-naratif">Essential Widgets for New Naratif</h2>
+
+<h3 id="text-and-typography">Text and Typography</h3>
+
+<p><strong>Text Editor Widget:</strong></p>
+<ul>
+  <li>Primary widget for article content</li>
+  <li>Supports rich text formatting</li>
+  <li>Can paste from Word/Google Docs</li>
+  <li>Maintains SEO-friendly HTML structure</li>
+</ul>
+
+<p><strong>Best Practices:</strong></p>
+<ul>
+  <li>Use consistent heading hierarchy (H2 → H3 → H4)</li>
+  <li>Apply typography settings globally when possible</li>
+  <li>Keep paragraphs concise for readability</li>
+  <li>Use bullet points for scannable content</li>
+</ul>
+
+<p><strong>Heading Widget:</strong></p>
+<ul>
+  <li>For standalone headings</li>
+  <li>Better performance than Text Editor for simple headings</li>
+  <li>Supports dynamic content</li>
+  <li>Advanced typography controls</li>
+</ul>
+
+<p><strong>Typography Settings:</strong></p>
+<ul>
+  <li>Font: Follow New Naratif brand guidelines</li>
+  <li>Desktop size: H1 (36px), H2 (28px), H3 (24px), Body (16px)</li>
+  <li>Line height: 1.4-1.6 for body text</li>
+  <li>Mobile adjustments: Reduce heading sizes by 20-30%</li>
+</ul>
+
+<h3 id="media-management">Media Management</h3>
+
+<p><strong>Image Widget:</strong></p>
+<ul>
+  <li>Supports lazy loading</li>
+  <li>Built-in lightbox option</li>
+  <li>Caption and alt text fields</li>
+  <li>Link options (none, media file, custom URL)</li>
+</ul>
+
+<p><strong>Image Optimization:</strong></p>
+<ol>
+  <li>Resize images before uploading (max 1920px width)</li>
+  <li>Use WebP format when possible</li>
+  <li>Compress images (aim for &lt;200KB)</li>
+  <li>Always add alt text for accessibility</li>
+  <li>Use descriptive filenames</li>
+</ol>
+
+<p><strong>Video Widget:</strong></p>
+<ul>
+  <li>YouTube/Vimeo integration preferred</li>
+  <li>Self-hosted video as last resort (bandwidth considerations)</li>
+  <li>Autoplay settings (muted only for user experience)</li>
+  <li>Custom thumbnail options</li>
+</ul>
+
+<p><strong>Gallery Widget:</strong></p>
+<ul>
+  <li>Multiple layout options (grid, masonry, carousel)</li>
+  <li>Lightbox functionality</li>
+  <li>Filterable galleries for categories</li>
+  <li>Performance impact: limit to 20 images per gallery</li>
+</ul>
+
+<h3 id="interactive-elements">Interactive Elements</h3>
+
+<p><strong>Button Widget:</strong></p>
+<ul>
+  <li>Consistent styling across site</li>
+  <li>Clear call-to-action text</li>
+  <li>Hover effects for engagement</li>
+  <li>Size variations (small, medium, large)</li>
+</ul>
+
+<p><strong>Button Best Practices:</strong></p>
+<ul>
+  <li>Primary CTA: “Join Now”, “Subscribe”, “Donate”</li>
+  <li>Secondary: “Learn More”, “Read Article”</li>
+  <li>Use action verbs</li>
+  <li>Maintain visual hierarchy</li>
+</ul>
+
+<p><strong>Form Integration:</strong>
+New Naratif uses forms for:</p>
+<ul>
+  <li>Newsletter signups</li>
+  <li>Membership applications</li>
+  <li>Contact forms</li>
+  <li>Event registrations</li>
+</ul>
+
+<p><strong>Implementation:</strong></p>
+<ol>
+  <li>Add Form widget</li>
+  <li>Configure fields as needed</li>
+  <li>Set up email notifications</li>
+  <li>Add success message</li>
+  <li>Test thoroughly before publishing</li>
+</ol>
+
+<p><strong>Social Icons:</strong></p>
+<ul>
+  <li>Link to New Naratif social profiles</li>
+  <li>Consistent brand colors</li>
+  <li>Strategic placement (header/footer/sidebar)</li>
+  <li>Include: Facebook, Twitter, Instagram, LinkedIn</li>
+</ul>
+
+<hr />
+
+<h2 id="new-naratif-specific-implementations">New Naratif-Specific Implementations</h2>
+
+<h3 id="brand-consistency-guidelines">Brand Consistency Guidelines</h3>
+
+<p><strong>Color Palette:</strong></p>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">Primary</span><span class="o">:</span> <span class="nf">#E85A4F</span>    <span class="c">/* New Naratif Red */</span>
+<span class="nt">Secondary</span><span class="o">:</span> <span class="err">#1</span><span class="nt">A1A1A</span>  <span class="c">/* Dark Gray */</span>
+<span class="nt">Accent</span><span class="o">:</span> <span class="nf">#F7B733</span>     <span class="c">/* Yellow */</span>
+<span class="nt">Text</span><span class="o">:</span> <span class="err">#333333</span>       <span class="c">/* Body Text */</span>
+<span class="nt">Background</span><span class="o">:</span> <span class="nf">#FFFFFF</span> <span class="c">/* White */</span>
+</code></pre></div></div>
+
+<p><strong>Typography Standards:</strong></p>
+<ul>
+  <li>Headings: Freight Sans (via Adobe Fonts)</li>
+  <li>Body: System fonts for performance</li>
+  <li>Consistent weight mappings:
+    <ul>
+      <li>Light: 300</li>
+      <li>Regular: 400</li>
+      <li>Medium: 500</li>
+      <li>Bold: 700</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Spacing Conventions:</strong></p>
+<ul>
+  <li>Section padding: 60px top/bottom (desktop), 40px (mobile)</li>
+  <li>Column gaps: 20px default</li>
+  <li>Widget margins: 20px bottom</li>
+  <li>Consistent throughout site</li>
+</ul>
+
+<h3 id="common-page-layouts">Common Page Layouts</h3>
+
+<p><strong>Article Page Template:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Header Section
+├── Featured Image (full width)
+├── Title (H1)
+├── Meta information (author, date, category)
+└── Social sharing buttons
+
+Content Section
+├── Text content (with inline images)
+├── Pull quotes
+├── Related images/galleries
+└── Embedded media
+
+Footer Section
+├── Author bio
+├── Related articles
+├── Comments (if enabled)
+└── Newsletter signup
+</code></pre></div></div>
+
+<p><strong>Landing Page Structure:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Hero Section
+├── Headline
+├── Subheadline
+├── CTA button
+└── Background image/video
+
+Features Section
+├── 3-column layout
+├── Icon boxes
+└── Brief descriptions
+
+Content Section
+├── Detailed information
+├── Supporting images
+└── Testimonials
+
+CTA Section
+├── Strong call-to-action
+├── Form or button
+└── Urgency messaging
+</code></pre></div></div>
+
+<p><strong>Campaign Page Components:</strong></p>
+<ul>
+  <li>Hero banner with campaign visuals</li>
+  <li>Progress indicators (for fundraising)</li>
+  <li>Story sections with mixed media</li>
+  <li>Donation/action widgets</li>
+  <li>Social proof elements</li>
+  <li>Share campaign tools</li>
+</ul>
+
+<h3 id="social-sharing-integration">Social Sharing Integration</h3>
+
+<p><strong>Implementation Steps:</strong></p>
+<ol>
+  <li>Add Share Buttons widget</li>
+  <li>Configure networks:
+    <ul>
+      <li>Facebook (primary)</li>
+      <li>Twitter/X</li>
+      <li>WhatsApp (mobile important)</li>
+      <li>Email</li>
+      <li>Copy link</li>
+    </ul>
+  </li>
+</ol>
+
+<p><strong>Placement Strategy:</strong></p>
+<ul>
+  <li>Floating sidebar (desktop)</li>
+  <li>Sticky bottom bar (mobile)</li>
+  <li>After content block</li>
+  <li>Within hero sections for campaigns</li>
+</ul>
+
+<h3 id="membership-ctas">Membership CTAs</h3>
+
+<p><strong>Standard Membership Blocks:</strong></p>
+
+<p><strong>Inline CTA:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[Box with border]
+Support Independent Journalism
+Join New Naratif as a member and help us 
+continue our important work.
+[Join Now Button]
+</code></pre></div></div>
+
+<p><strong>Footer Membership Block:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[Full-width section]
+Become a Member
+- Access all premium content
+- Support independent media
+- Join our community
+[Membership Tiers] [Sign Up Button]
+</code></pre></div></div>
+
+<blockquote class="important">
+  <p>Always use production URLs (newnaratif.com) not development URLs (dev.newnaratif.com)</p>
+</blockquote>
+
+<hr />
+
+<h2 id="advanced-features">Advanced Features</h2>
+
+<h3 id="dynamic-content">Dynamic Content</h3>
+
+<p>Dynamic content pulls information from WordPress automatically.</p>
+
+<p><strong>Common Use Cases:</strong></p>
+<ul>
+  <li>Post title in hero sections</li>
+  <li>Author name and bio</li>
+  <li>Publication date</li>
+  <li>Category/tag display</li>
+  <li>Custom field values</li>
+</ul>
+
+<p><strong>Implementation:</strong></p>
+<ol>
+  <li>Select widget (e.g., Heading)</li>
+  <li>Click dynamic tag icon (stack icon)</li>
+  <li>Choose data source:
+    <ul>
+      <li>Post Title</li>
+      <li>Post Excerpt</li>
+      <li>Custom Fields</li>
+      <li>Author Info</li>
+    </ul>
+  </li>
+  <li>Configure display settings</li>
+</ol>
+
+<h3 id="theme-builder">Theme Builder</h3>
+
+<p>The Theme Builder controls templates for entire post types.</p>
+
+<p><strong>Current Implementation:</strong></p>
+<ul>
+  <li>Single Post template for articles</li>
+  <li>Archive template for category pages</li>
+  <li>Custom conditions for Elementor vs non-Elementor posts</li>
+</ul>
+
+<p><strong>Creating Custom Conditions:</strong>
+When you need different templates for different content types:</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Example: Posts built with Elementor</span>
+<span class="c1">// This is already implemented at New Naratif</span>
+<span class="nf">add_action</span><span class="p">(</span><span class="s1">'elementor/theme/register_conditions'</span><span class="p">,</span> <span class="k">function</span><span class="p">(</span><span class="nv">$conditions_manager</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Custom condition logic here</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<p><strong>Managing Templates:</strong></p>
+<ol>
+  <li>Navigate to Templates → Theme Builder</li>
+  <li>Create new template</li>
+  <li>Set display conditions carefully</li>
+  <li>Test on multiple post types</li>
+  <li>Monitor for conflicts</li>
+</ol>
+
+<h3 id="global-widgets">Global Widgets</h3>
+
+<p>Global widgets maintain consistency across the site.</p>
+
+<p><strong>Creating Global Widgets:</strong></p>
+<ol>
+  <li>Design your widget</li>
+  <li>Right-click → Save as Global</li>
+  <li>Name descriptively (e.g., “Global-Newsletter-Signup”)</li>
+  <li>Use across multiple pages</li>
+  <li>Edit once, update everywhere</li>
+</ol>
+
+<p><strong>Use Cases:</strong></p>
+<ul>
+  <li>Newsletter signup forms</li>
+  <li>Membership CTAs</li>
+  <li>Footer information</li>
+  <li>Sidebar widgets</li>
+  <li>Author bio boxes</li>
+</ul>
+
+<h3 id="custom-css">Custom CSS</h3>
+
+<p>For advanced styling beyond Elementor’s options:</p>
+
+<p><strong>Adding Custom CSS:</strong></p>
+<ol>
+  <li>Select element</li>
+  <li>Advanced tab → Custom CSS</li>
+  <li>Add CSS code</li>
+  <li>Use <code class="language-plaintext highlighter-rouge">selector</code> as placeholder</li>
+</ol>
+
+<p><strong>Example:</strong></p>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">selector</span> <span class="p">{</span>
+    <span class="nl">transition</span><span class="p">:</span> <span class="n">all</span> <span class="m">0.3s</span> <span class="n">ease</span><span class="p">;</span>
+    <span class="nl">border-radius</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">selector</span><span class="nd">:hover</span> <span class="p">{</span>
+    <span class="nl">transform</span><span class="p">:</span> <span class="n">translateY</span><span class="p">(</span><span class="m">-5px</span><span class="p">);</span>
+    <span class="nl">box-shadow</span><span class="p">:</span> <span class="m">0</span> <span class="m">5px</span> <span class="m">15px</span> <span class="n">rgba</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0.3</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="performance-optimization">Performance Optimization</h2>
+
+<h3 id="known-performance-issues">Known Performance Issues</h3>
+
+<p><strong>Current Challenges:</strong></p>
+<ul>
+  <li>Homepage loads slowly due to complex Elementor structure</li>
+  <li>Editor performance degrades with many elements</li>
+  <li>Mobile performance particularly affected</li>
+  <li>Multiple font requests slow initial load</li>
+</ul>
+
+<h3 id="best-practices-for-page-speed">Best Practices for Page Speed</h3>
+
+<p><strong>Content Optimization:</strong></p>
+<ol>
+  <li><strong>Limit Sections:</strong> Maximum 10-15 sections per page</li>
+  <li><strong>Optimize Images:</strong>
+    <ul>
+      <li>Use appropriate formats (WebP preferred)</li>
+      <li>Lazy load below-fold images</li>
+      <li>Compress all images</li>
+    </ul>
+  </li>
+  <li><strong>Minimize Animations:</strong>
+    <ul>
+      <li>Use sparingly</li>
+      <li>Disable on mobile</li>
+      <li>Prefer CSS over JavaScript animations</li>
+    </ul>
+  </li>
+  <li><strong>Widget Selection:</strong>
+    <ul>
+      <li>Use basic widgets when possible</li>
+      <li>Avoid nested carousels</li>
+      <li>Limit dynamic content widgets</li>
+    </ul>
+  </li>
+</ol>
+
+<p><strong>Technical Optimizations:</strong></p>
+<ol>
+  <li><strong>Enable Elementor Settings:</strong>
+    <ul>
+      <li>Improved CSS Loading</li>
+      <li>Optimized DOM Output</li>
+      <li>Lazy Load Background Images</li>
+    </ul>
+  </li>
+  <li><strong>Regular Maintenance:</strong>
+    <ul>
+      <li>Clean revision history</li>
+      <li>Remove unused templates</li>
+      <li>Optimize database</li>
+    </ul>
+  </li>
+  <li><strong>Content Delivery:</strong>
+    <ul>
+      <li>Use CDN for media files</li>
+      <li>Minimize external requests</li>
+      <li>Combine CSS/JS when possible</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="when-not-to-use-elementor">When NOT to Use Elementor</h3>
+
+<p>Avoid Elementor for:</p>
+<ul>
+  <li>Simple blog posts (use WordPress editor)</li>
+  <li>Content that needs frequent updates</li>
+  <li>High-traffic pages requiring maximum speed</li>
+  <li>Content managed by non-technical users</li>
+  <li>Archive pages with many posts</li>
+</ul>
+
+<p><strong>Performance Comparison:</strong></p>
+<ul>
+  <li>Standard WordPress post: ~1-2 second load</li>
+  <li>Simple Elementor page: ~2-3 second load</li>
+  <li>Complex Elementor page: ~3-5+ second load</li>
+</ul>
+
+<hr />
+
+<h2 id="troubleshooting-guide">Troubleshooting Guide</h2>
+
+<h3 id="common-issues-and-solutions">Common Issues and Solutions</h3>
+
+<p><strong>Issue: Elementor Won’t Load</strong></p>
+
+<p><em>Symptoms:</em> Loading screen stuck, white screen, or error messages</p>
+
+<p><em>Solutions:</em></p>
+<ol>
+  <li>Clear browser cache and cookies</li>
+  <li>Try incognito/private mode</li>
+  <li>Disable browser extensions</li>
+  <li>Increase PHP memory limit</li>
+  <li>Check for plugin conflicts</li>
+</ol>
+
+<blockquote class="note">
+  <p>For homepage specifically: Be patient - it can take several minutes to load due to complexity</p>
+</blockquote>
+
+<p><strong>Issue: Content Not Displaying Correctly</strong></p>
+
+<p><em>Symptoms:</em> Missing elements, broken layouts, wrong styling</p>
+
+<p><em>Solutions:</em></p>
+<ol>
+  <li>Regenerate CSS (Elementor → Tools → Regenerate CSS)</li>
+  <li>Clear all caches (server, CDN, browser)</li>
+  <li>Check responsive settings</li>
+  <li>Verify theme compatibility</li>
+  <li>Review custom CSS for conflicts</li>
+</ol>
+
+<p><strong>Issue: Changes Not Saving</strong></p>
+
+<p><em>Solutions:</em></p>
+<ol>
+  <li>Check user permissions</li>
+  <li>Increase PHP max_input_vars</li>
+  <li>Disable security plugins temporarily</li>
+  <li>Save in smaller increments</li>
+  <li>Check server error logs</li>
+</ol>
+
+<p><strong>Issue: Mobile Display Problems</strong></p>
+
+<p><em>Solutions:</em></p>
+<ol>
+  <li>Use responsive preview while editing</li>
+  <li>Check hide/show settings per device</li>
+  <li>Adjust column settings for mobile</li>
+  <li>Test on actual devices</li>
+  <li>Consider mobile-first design approach</li>
+</ol>
+
+<h3 id="conflict-resolution">Conflict Resolution</h3>
+
+<p><strong>Plugin Conflicts:</strong></p>
+<ol>
+  <li>Deactivate all plugins except Elementor</li>
+  <li>Test if issue persists</li>
+  <li>Reactivate plugins one by one</li>
+  <li>Identify conflicting plugin</li>
+  <li>Find alternative or contact support</li>
+</ol>
+
+<p><strong>Theme Conflicts:</strong></p>
+<ul>
+  <li>New Naratif uses BuddyBoss child theme</li>
+  <li>Known compatible with Elementor</li>
+  <li>Check child theme customizations</li>
+  <li>Verify functions.php modifications</li>
+</ul>
+
+<h3 id="emergency-recovery">Emergency Recovery</h3>
+
+<p><strong>If Page Breaks:</strong></p>
+<ol>
+  <li>Access WordPress admin directly</li>
+  <li>Navigate to page/post list</li>
+  <li>Switch to WordPress editor</li>
+  <li>Save content as draft</li>
+  <li>Restore from revision history</li>
+  <li>Contact technical support if needed</li>
+</ol>
+
+<p><strong>Revision History:</strong></p>
+<ol>
+  <li>Edit with Elementor</li>
+  <li>Click History icon (clock symbol)</li>
+  <li>Browse through versions</li>
+  <li>Click “Apply” to restore</li>
+  <li>Save immediately after restoring</li>
+</ol>
+
+<hr />
+
+<h2 id="quick-reference">Quick Reference</h2>
+
+<h3 id="essential-keyboard-shortcuts">Essential Keyboard Shortcuts</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Action</th>
+      <th>Windows/Linux</th>
+      <th>Mac</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Undo</td>
+      <td>Ctrl + Z</td>
+      <td>Cmd + Z</td>
+    </tr>
+    <tr>
+      <td>Redo</td>
+      <td>Ctrl + Shift + Z</td>
+      <td>Cmd + Shift + Z</td>
+    </tr>
+    <tr>
+      <td>Save</td>
+      <td>Ctrl + S</td>
+      <td>Cmd + S</td>
+    </tr>
+    <tr>
+      <td>Duplicate</td>
+      <td>Ctrl + D</td>
+      <td>Cmd + D</td>
+    </tr>
+    <tr>
+      <td>Copy</td>
+      <td>Ctrl + C</td>
+      <td>Cmd + C</td>
+    </tr>
+    <tr>
+      <td>Paste</td>
+      <td>Ctrl + V</td>
+      <td>Cmd + V</td>
+    </tr>
+    <tr>
+      <td>Paste Style</td>
+      <td>Ctrl + Shift + V</td>
+      <td>Cmd + Shift + V</td>
+    </tr>
+    <tr>
+      <td>Delete</td>
+      <td>Delete</td>
+      <td>Delete</td>
+    </tr>
+    <tr>
+      <td>Navigator</td>
+      <td>Ctrl + I</td>
+      <td>Cmd + I</td>
+    </tr>
+    <tr>
+      <td>Preview</td>
+      <td>Ctrl + P</td>
+      <td>Cmd + P</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="widget-panel-icons">Widget Panel Icons</h3>
+
+<ul>
+  <li>📝 Basic: Text, heading, image, video, button</li>
+  <li>🎨 General: Columns, spacer, divider, Google Maps</li>
+  <li>🔧 Pro: Posts, portfolio, forms, slides</li>
+  <li>🌐 WordPress: WordPress widgets</li>
+  <li>⭐ Global: Saved global widgets</li>
+</ul>
+
+<h3 id="responsive-breakpoints">Responsive Breakpoints</h3>
+
+<ul>
+  <li><strong>Desktop:</strong> 1025px and above</li>
+  <li><strong>Tablet:</strong> 768px to 1024px</li>
+  <li><strong>Mobile:</strong> 767px and below</li>
+</ul>
+
+<h3 id="css-classes-for-custom-styling">CSS Classes for Custom Styling</h3>
+
+<p>Common Elementor classes to target:</p>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.elementor-widget-heading</span>     <span class="c">/* All heading widgets */</span>
+<span class="nc">.elementor-widget-text-editor</span> <span class="c">/* All text editor widgets */</span>
+<span class="nc">.elementor-widget-image</span>       <span class="c">/* All image widgets */</span>
+<span class="nc">.elementor-button</span>             <span class="c">/* All buttons */</span>
+<span class="nc">.elementor-section</span>            <span class="c">/* All sections */</span>
+<span class="nc">.elementor-column</span>             <span class="c">/* All columns */</span>
+</code></pre></div></div>
+
+<h3 id="performance-checklist">Performance Checklist</h3>
+
+<p>Before publishing any Elementor page:</p>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Images optimized and compressed</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Responsive settings configured</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Unnecessary widgets removed</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Custom CSS minimized</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Preview tested on all devices</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Forms tested and working</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Links verified (no dev URLs)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />SEO settings configured</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Performance impact assessed</li>
+</ul>
+
+<h3 id="support-resources">Support Resources</h3>
+
+<p><strong>Internal:</strong></p>
+<ul>
+  <li>Technical documentation in Obsidian vault</li>
+  <li>Previous troubleshooting logs</li>
+  <li>Team knowledge base</li>
+</ul>
+
+<p><strong>External:</strong></p>
+<ul>
+  <li><a href="https://elementor.com/help/">Elementor Documentation</a></li>
+  <li><a href="https://codex.wordpress.org/">WordPress Codex</a></li>
+  <li>New Naratif technical support channel</li>
+</ul>
+
+<hr />
+
+<p><em>Last updated: September 03, 2025</em></p>

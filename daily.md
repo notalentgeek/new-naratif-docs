@@ -10,4 +10,15 @@ has_toc: false
 
 Routine tasks and procedures for daily website management.
 
+## Elementor Documentation
+
+Essential guides for using Elementor page builder:
+
+- **[Complete Elementor Guide]({{ '/elementor-complete-guide/' | relative_url }})** - Comprehensive documentation for all skill levels
+- **[Elementor Quick Start]({{ '/elementor-quick-start/' | relative_url }})** - 30-minute guide for new team members
+
+## Quick Access
+
+Quick access to daily operational procedures for website management.
+
 ---
