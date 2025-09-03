@@ -44,4 +44,4 @@ This manual contains critical procedures for managing the New Naratif WordPress 
 {: .note }
 > Keep this documentation bookmarked and accessible offline. Download a PDF version monthly.
 
-Last updated: {{ site.time | date: '%B %d, %Y' }}
+Last updated: {{ site.time | date: '%B %d, %Y at %I:%M %p' }}
