@@ -5,7 +5,7 @@ baseurl: "/new-naratif-docs"
 url: "https://notalentgeek.github.io"
 
 # Theme
-remote_theme: just-the-docs/just-the-docs@v0.7.0
+theme: just-the-docs
 
 # Just the Docs Collections Configuration
 just_the_docs:
