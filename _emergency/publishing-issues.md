@@ -83,7 +83,7 @@ If that fails:
 
 ### Method 2: Email Publishing
 If configured:
-1. Send email to [publishing-email@newnaratif.com]
+1. Send email to [configured-publishing-email]
 2. Subject becomes title
 3. Body becomes content
 4. Check Posts → All Posts for draft
